@@ -83,7 +83,7 @@ public class SavableList : MonoBehaviour
 		{
 			try
 			{
-				using (Stream stream = File.Open(Application.dataPath + "/saves/" + levelName + ".bin", FileMode.Open))
+				using (Stream stream = File.Open(Application.dataPath + "/Saves/" + levelName + ".bin", FileMode.Open))
 				{
 					var binForm = new BinaryFormatter();
 
@@ -102,7 +102,7 @@ public class SavableList : MonoBehaviour
 		{
 			foreach (Transform child in transform)
 			{
-				SavableObject curData = child.gameObject.GetComponent("MyObject") as SavableObject;
+				SavableObject curData = child.gameObject.GetComponent("SavableObject") as SavableObject;
 				if (curData != null)
 				{
 					Destroy(child.gameObject);
@@ -134,11 +134,11 @@ public class SavableList : MonoBehaviour
 
 	void CompileSaveData()
 	{
-		SavableObject curData = new SavableObject();
+        SavableObject curData;
 		myObjectList.Clear();
 		foreach (Transform child in transform)
 		{
-			curData = child.gameObject.GetComponent("MyObject") as SavableObject;
+			curData = child.gameObject.GetComponent("SavableObject") as SavableObject;
 			if (curData != null)
 			{
 				myObjectList.Add(new SavableData(
