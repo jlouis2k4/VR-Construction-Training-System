@@ -1,0 +1,657 @@
+/target:library
+/nowarn:0169
+/out:Temp/Assembly-CSharp.dll
+/debug:portable
+/optimize-
+/nostdlib+
+/preferreduilang:en-US
+/langversion:latest
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.FileSystemHttpModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.HotReloadModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.LocalizationModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.ProfilerModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.StreamingModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.SubstanceModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.TLSModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.TextCoreModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.UmbraModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityTestProtocolModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.VFXModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/UnityEditor.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/Managed/Unity.Locator.dll"
+/reference:Library/ScriptAssemblies/Unity.Timeline.Editor.dll
+/reference:Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll
+/reference:Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll
+/reference:Library/ScriptAssemblies/Unity.Timeline.dll
+/reference:Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll
+/reference:Library/ScriptAssemblies/SteamVR_Actions.dll
+/reference:Library/ScriptAssemblies/SteamVR_Input_Editor.dll
+/reference:Library/ScriptAssemblies/SteamVR_Editor.dll
+/reference:Library/ScriptAssemblies/SteamVR.dll
+/reference:Library/ScriptAssemblies/Unity.TextMeshPro.dll
+/reference:Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll
+/reference:Library/ScriptAssemblies/SteamVR_Windows_EditorHelper.dll
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll"
+/reference:Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll
+/reference:C:/Users/DAQuser/Desktop/VR-CTS/VR-Construction-Training-System/VR-CTS/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll
+/reference:C:/Users/DAQuser/Desktop/VR-CTS/VR-Construction-Training-System/VR-CTS/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll
+/reference:C:/Users/DAQuser/Desktop/VR-CTS/VR-Construction-Training-System/VR-CTS/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/Microsoft.Win32.Primitives.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.AppContext.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.Concurrent.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.NonGeneric.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.Specialized.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.EventBasedAsync.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.Primitives.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.TypeConverter.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Console.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Data.Common.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Contracts.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Debug.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.FileVersionInfo.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Process.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.StackTrace.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.TextWriterTraceListener.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Tools.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.TraceSource.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Tracing.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Drawing.Primitives.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Dynamic.Runtime.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.Calendars.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.Extensions.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Compression.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Compression.ZipFile.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.DriveInfo.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.Primitives.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.Watcher.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.IsolatedStorage.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.MemoryMappedFiles.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Pipes.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.UnmanagedMemoryStream.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Expressions.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Parallel.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Queryable.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Http.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.NameResolution.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.NetworkInformation.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Ping.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Primitives.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Requests.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Security.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Sockets.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebHeaderCollection.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebSockets.Client.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebSockets.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ObjectModel.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.Extensions.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.Primitives.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.Reader.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.ResourceManager.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.Writer.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.CompilerServices.VisualC.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Extensions.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Handles.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.InteropServices.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.InteropServices.RuntimeInformation.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Numerics.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Formatters.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Json.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Primitives.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Xml.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Claims.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Algorithms.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Csp.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Encoding.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Primitives.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.X509Certificates.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Principal.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.SecureString.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Text.Encoding.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Text.Encoding.Extensions.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Text.RegularExpressions.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Overlapped.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Tasks.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Tasks.Parallel.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Thread.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.ThreadPool.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Timer.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ValueTuple.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.ReaderWriter.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XDocument.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XmlDocument.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XmlSerializer.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XPath.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XPath.XDocument.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/Extensions/2.0.0/System.Numerics.Vectors.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.ComponentModel.Composition.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Core.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Data.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Drawing.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.IO.Compression.FileSystem.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Net.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Numerics.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Runtime.Serialization.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.ServiceModel.Web.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Transactions.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Web.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Windows.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Linq.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll"
+/define:UNITY_2019_1_2
+/define:UNITY_2019_1
+/define:UNITY_2019
+/define:UNITY_5_3_OR_NEWER
+/define:UNITY_5_4_OR_NEWER
+/define:UNITY_5_5_OR_NEWER
+/define:UNITY_5_6_OR_NEWER
+/define:UNITY_2017_1_OR_NEWER
+/define:UNITY_2017_2_OR_NEWER
+/define:UNITY_2017_3_OR_NEWER
+/define:UNITY_2017_4_OR_NEWER
+/define:UNITY_2018_1_OR_NEWER
+/define:UNITY_2018_2_OR_NEWER
+/define:UNITY_2018_3_OR_NEWER
+/define:UNITY_2019_1_OR_NEWER
+/define:PLATFORM_ARCH_64
+/define:UNITY_64
+/define:UNITY_INCLUDE_TESTS
+/define:ENABLE_AUDIO
+/define:ENABLE_CACHING
+/define:ENABLE_CLOTH
+/define:ENABLE_DUCK_TYPING
+/define:ENABLE_MICROPHONE
+/define:ENABLE_MULTIPLE_DISPLAYS
+/define:ENABLE_PHYSICS
+/define:ENABLE_SPRITES
+/define:ENABLE_GRID
+/define:ENABLE_TILEMAP
+/define:ENABLE_TERRAIN
+/define:ENABLE_TEXTURE_STREAMING
+/define:ENABLE_DIRECTOR
+/define:ENABLE_UNET
+/define:ENABLE_LZMA
+/define:ENABLE_UNITYEVENTS
+/define:ENABLE_WEBCAM
+/define:ENABLE_WWW
+/define:ENABLE_CLOUD_SERVICES_COLLAB
+/define:ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS
+/define:ENABLE_CLOUD_SERVICES_ADS
+/define:ENABLE_CLOUD_HUB
+/define:ENABLE_CLOUD_PROJECT_ID
+/define:ENABLE_CLOUD_SERVICES_USE_WEBREQUEST
+/define:ENABLE_CLOUD_SERVICES_UNET
+/define:ENABLE_CLOUD_SERVICES_BUILD
+/define:ENABLE_CLOUD_LICENSE
+/define:ENABLE_EDITOR_HUB
+/define:ENABLE_EDITOR_HUB_LICENSE
+/define:ENABLE_WEBSOCKET_CLIENT
+/define:ENABLE_DIRECTOR_AUDIO
+/define:ENABLE_DIRECTOR_TEXTURE
+/define:ENABLE_TIMELINE
+/define:ENABLE_EDITOR_METRICS
+/define:ENABLE_EDITOR_METRICS_CACHING
+/define:ENABLE_MANAGED_JOBS
+/define:ENABLE_MANAGED_TRANSFORM_JOBS
+/define:ENABLE_MANAGED_ANIMATION_JOBS
+/define:ENABLE_MANAGED_AUDIO_JOBS
+/define:INCLUDE_DYNAMIC_GI
+/define:INCLUDE_GI
+/define:ENABLE_MONO_BDWGC
+/define:PLATFORM_SUPPORTS_MONO
+/define:RENDER_SOFTWARE_CURSOR
+/define:INCLUDE_PUBNUB
+/define:ENABLE_VIDEO
+/define:ENABLE_CUSTOM_RENDER_TEXTURE
+/define:ENABLE_LOCALIZATION
+/define:PLATFORM_STANDALONE_WIN
+/define:PLATFORM_STANDALONE
+/define:UNITY_STANDALONE_WIN
+/define:UNITY_STANDALONE
+/define:ENABLE_SUBSTANCE
+/define:ENABLE_RUNTIME_GI
+/define:ENABLE_MOVIES
+/define:ENABLE_NETWORK
+/define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
+/define:ENABLE_UNITYWEBREQUEST
+/define:ENABLE_CLOUD_SERVICES
+/define:ENABLE_CLOUD_SERVICES_ANALYTICS
+/define:ENABLE_CLOUD_SERVICES_PURCHASING
+/define:ENABLE_CLOUD_SERVICES_CRASH_REPORTING
+/define:ENABLE_OUT_OF_PROCESS_CRASH_HANDLER
+/define:ENABLE_SCRIPTING_GC_WBARRIERS
+/define:ENABLE_EVENT_QUEUE
+/define:ENABLE_CLUSTER_SYNC
+/define:ENABLE_CLUSTERINPUT
+/define:ENABLE_VR
+/define:ENABLE_AR
+/define:ENABLE_WEBSOCKET_HOST
+/define:ENABLE_MONO
+/define:NET_STANDARD_2_0
+/define:ENABLE_PROFILER
+/define:DEBUG
+/define:TRACE
+/define:UNITY_ASSERTIONS
+/define:UNITY_EDITOR
+/define:UNITY_EDITOR_64
+/define:UNITY_EDITOR_WIN
+/define:ENABLE_UNITY_COLLECTIONS_CHECKS
+/define:ENABLE_BURST_AOT
+/define:UNITY_TEAM_LICENSE
+/define:ENABLE_VSTU
+/define:VRTK_DEFINE_SDK_STEAMVR
+/define:VRTK_DEFINE_STEAMVR_PLUGIN_1_1_1_OR_OLDER
+/define:VRTK_VERSION_3_1_0_OR_NEWER
+/define:VRTK_VERSION_3_2_0_OR_NEWER
+/define:VRTK_VERSION_3_2_1_OR_NEWER
+/define:VRTK_VERSION_3_3_0
+/define:VRTK_VERSION_3_3_0_OR_NEWER
+/define:CSHARP_7_OR_LATER
+/define:CSHARP_7_3_OR_NEWER
+Assets\Scripts\Constants.cs
+Assets\Scripts\SavableList.cs
+Assets\Scripts\SavableObject.cs
+Assets\VRController.cs
+"Assets\VRTK\Examples\ExampleResources\SceneResources\[001 - Interactions] ControllerEvents\Scripts\VRTKExample_ControllerEventsDelegateListeners.cs"
+"Assets\VRTK\Examples\ExampleResources\SceneResources\[002 - Pointers] StraightPointer\Scripts\VRTKExample_PointerObjectHighlighterActivator.cs"
+"Assets\VRTK\Examples\ExampleResources\SceneResources\[003 - Pointers] BezierPointer\Scripts\VRTKExample_BezierPointerChanger.cs"
+"Assets\VRTK\Examples\ExampleResources\SceneResources\[003 - Pointers] BezierPointer\Scripts\VRTKExample_BezierPointerCustomStyles.cs"
+"Assets\VRTK\Examples\ExampleResources\SceneResources\[003 - Pointers] BezierPointer\Scripts\VRTKExample_BezierPointerDefaults.cs"
+"Assets\VRTK\Examples\ExampleResources\SceneResources\[003 - Pointers] BezierPointer\Scripts\VRTKExample_BezierPointerLineRenderer.cs"
+"Assets\VRTK\Examples\ExampleResources\SceneResources\[005 - Interactions] InteractableObjects\Scripts\ControllableReactor.cs"
+"Assets\VRTK\Examples\ExampleResources\SceneResources\[005 - Interactions] InteractableObjects\Scripts\SnapDropZoneToggle.cs"
+"Assets\VRTK\Examples\ExampleResources\SceneResources\[005 - Interactions] InteractableObjects\Scripts\ToggleCustomHands.cs"
+"Assets\VRTK\Examples\ExampleResources\SceneResources\[005 - Interactions] InteractableObjects\Scripts\TogglePointerInteraction.cs"
+"Assets\VRTK\Examples\ExampleResources\SceneResources\[006 - Locomotion] MovementTypes\Scripts\ClimbableHandLift.cs"
+"Assets\VRTK\Examples\ExampleResources\SceneResources\[006 - Locomotion] MovementTypes\Scripts\ElevatorControl.cs"
+"Assets\VRTK\Examples\ExampleResources\SceneResources\[006 - Locomotion] MovementTypes\Scripts\IgnoreTeleportDummy.cs"
+"Assets\VRTK\Examples\ExampleResources\SceneResources\[006 - Locomotion] MovementTypes\Scripts\OptionsMenu.cs"
+"Assets\VRTK\Examples\ExampleResources\SceneResources\[006 - Locomotion] MovementTypes\Scripts\ToggleGameObject.cs"
+"Assets\VRTK\Examples\ExampleResources\SceneResources\[006 - Locomotion] MovementTypes\Scripts\ToggleGameObjectSlider.cs"
+"Assets\VRTK\Examples\ExampleResources\SceneResources\[007 - Interactions] InteractionHelpers\Scripts\PanelMenuSaucerGrid.cs"
+"Assets\VRTK\Examples\ExampleResources\SceneResources\[007 - Interactions] InteractionHelpers\Scripts\PanelMenuSphereSlider.cs"
+Assets\VRTK\Examples\ExampleResources\SharedResources\Prefabs\AnimatedBezierPointer\Scripts\BeamRotator.cs
+Assets\VRTK\Examples\ExampleResources\SharedResources\Prefabs\FireExtinguisher\Scripts\FireExtinguisher_Base.cs
+Assets\VRTK\Examples\ExampleResources\SharedResources\Prefabs\FireExtinguisher\Scripts\FireExtinguisher_Sprayer.cs
+Assets\VRTK\Examples\ExampleResources\SharedResources\Prefabs\Guns\Scripts\GunShoot.cs
+Assets\VRTK\Examples\ExampleResources\SharedResources\Prefabs\Lamp\Scripts\InteractableLamp.cs
+Assets\VRTK\Examples\ExampleResources\SharedResources\Prefabs\LightSaber\Scripts\ScaleOnUse.cs
+Assets\VRTK\Examples\ExampleResources\SharedResources\Prefabs\Whirlygig\Scripts\InteractableWhirlyGig.cs
+Assets\VRTK\Examples\ExampleResources\SharedResources\Scripts\VRTKExample_FixSetup.cs
+Assets\VRTK\Examples\ExampleResources\SharedResources\Scripts\VRTKExample_ObjectListToggle.cs
+Assets\VRTK\Examples\ExampleResources\SharedResources\Scripts\VRTKExample_OptionTile.cs
+Assets\VRTK\Examples\ExampleResources\SharedResources\Scripts\VRTKExample_OptionTilePointerSelector.cs
+Assets\VRTK\Examples\ExampleResources\SharedResources\Scripts\VRTKExample_SceneSwitcher.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Archery\Arrow.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Archery\ArrowNotch.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Archery\ArrowSpawner.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Archery\BowAim.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Archery\BowAnimation.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Archery\BowHandle.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Archery\Follow.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\AutoRotation.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Breakable_Cube.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\ButtonReactor.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Controller_Hand.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Controller_Menu.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\ControlReactor.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\ControlsMenu.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\ExcludeTeleport.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\FireExtinguisher_Base.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\FireExtinguisher_Sprayer.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Gun.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\HandLift.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Lamp.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\LightSaber.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Menu_Color_Changer.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Menu_Container_Object_Colors.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Menu_Object_Spawner.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\ModelVillage_TeleportLocation.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\MoveBlock.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Openable_Door.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\PanelMenu\PanelMenuDemoFlyingSaucer.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\PanelMenu\PanelMenuDemoSphere.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\PanelMenu\PanelMenuUIGrid.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\PanelMenu\PanelMenuUISlider.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\PusherStickyToggle.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\RC_Car.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\RC_Car_Controller.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\RealGun.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\RealGun_SafetySwitch.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\RealGun_Slide.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Remote_Beam.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Remote_Beam_Controller.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\RendererOffOnDash.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\SceneChanger.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\SceneLoader.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\SnapDropZoneGroup_Switcher.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Sphere_Spawner.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Sword.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Tests\VRTK_BaseTest.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Tests\VRTK_ControllerReference_Setup.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\UI_Interactions.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\UI_Keyboard.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\UseRotate.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\VRTK_ControllerAppearance_Example.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\VRTK_ControllerEvents_ListenerExample.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\VRTK_ControllerInteract_ListenerExample.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\VRTK_ControllerPointerEvents_ListenerExample.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\VRTK_ControllerUIPointerEvents_ListenerExample.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\VRTK_RoomExtender_ControllerExample.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Whirlygig.cs
+Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Zipline.cs
+Assets\VRTK\Prefabs\AvatarHands\VRTK_AvatarHandController.cs
+Assets\VRTK\Prefabs\ConsoleViewerCanvas\VRTK_ConsoleViewer.cs
+Assets\VRTK\Prefabs\ControllerRigidbodyActivator\VRTK_ControllerRigidbodyActivator.cs
+Assets\VRTK\Prefabs\ControllerTooltips\VRTK_ControllerTooltips.cs
+Assets\VRTK\Prefabs\DesktopCamera\VRTK_DesktopCamera.cs
+Assets\VRTK\Prefabs\DestinationPoint\VRTK_DestinationPoint.cs
+Assets\VRTK\Prefabs\FramesPerSecondCanvas\VRTK_FramesPerSecondViewer.cs
+Assets\VRTK\Prefabs\ObjectTooltip\VRTK_ObjectTooltip.cs
+Assets\VRTK\Prefabs\PanelMenu\VRTK_PanelMenuController.cs
+Assets\VRTK\Prefabs\PanelMenu\VRTK_PanelMenuItemController.cs
+Assets\VRTK\Prefabs\PointerDirectionIndicator\VRTK_PointerDirectionIndicator.cs
+Assets\VRTK\Prefabs\RadialMenu\RadialMenuButton\RadialButtonIcon.cs
+Assets\VRTK\Prefabs\RadialMenu\RadialMenuButton\UICircle.cs
+Assets\VRTK\Prefabs\RadialMenu\VRTK_IndependentRadialMenuController.cs
+Assets\VRTK\Prefabs\RadialMenu\VRTK_RadialMenu.cs
+Assets\VRTK\Prefabs\RadialMenu\VRTK_RadialMenuController.cs
+Assets\VRTK\Prefabs\SDKSetupSwitcher\VRTK_SDKSetupSwitcher.cs
+Assets\VRTK\Prefabs\SnapDropZone\VRTK_SnapDropZone.cs
+Assets\VRTK\Source\Scripts\Controls\3D\Utilities\VRTK_ContentHandler.cs
+Assets\VRTK\Source\Scripts\Controls\3D\VRTK_Button.cs
+Assets\VRTK\Source\Scripts\Controls\3D\VRTK_Chest.cs
+Assets\VRTK\Source\Scripts\Controls\3D\VRTK_Control.cs
+Assets\VRTK\Source\Scripts\Controls\3D\VRTK_Door.cs
+Assets\VRTK\Source\Scripts\Controls\3D\VRTK_Drawer.cs
+Assets\VRTK\Source\Scripts\Controls\3D\VRTK_Knob.cs
+Assets\VRTK\Source\Scripts\Controls\3D\VRTK_Lever.cs
+Assets\VRTK\Source\Scripts\Controls\3D\VRTK_Slider.cs
+Assets\VRTK\Source\Scripts\Controls\3D\VRTK_SpringLever.cs
+Assets\VRTK\Source\Scripts\Controls\3D\VRTK_Wheel.cs
+Assets\VRTK\Source\Scripts\Interactions\Highlighters\VRTK_BaseHighlighter.cs
+Assets\VRTK\Source\Scripts\Interactions\Highlighters\VRTK_MaterialColorSwapHighlighter.cs
+Assets\VRTK\Source\Scripts\Interactions\Highlighters\VRTK_MaterialPropertyBlockColorSwapHighlighter.cs
+Assets\VRTK\Source\Scripts\Interactions\Highlighters\VRTK_OutlineObjectCopyHighlighter.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\Controllables\Artificial\VRTK_ArtificialPusher.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\Controllables\Artificial\VRTK_ArtificialRotator.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\Controllables\Artificial\VRTK_ArtificialSlider.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\Controllables\Physics\VRTK_BasePhysicsControllable.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\Controllables\Physics\VRTK_PhysicsPusher.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\Controllables\Physics\VRTK_PhysicsRotator.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\Controllables\Physics\VRTK_PhysicsSlider.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\Controllables\VRTK_BaseControllable.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\GrabAttachMechanics\VRTK_BaseGrabAttach.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\GrabAttachMechanics\VRTK_BaseJointGrabAttach.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\GrabAttachMechanics\VRTK_ChildOfControllerGrabAttach.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\GrabAttachMechanics\VRTK_ClimbableGrabAttach.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\GrabAttachMechanics\VRTK_ControlAnimationGrabAttach.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\GrabAttachMechanics\VRTK_CustomJointGrabAttach.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\GrabAttachMechanics\VRTK_FixedJointGrabAttach.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\GrabAttachMechanics\VRTK_MoveTransformGrabAttach.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\GrabAttachMechanics\VRTK_RotateTransformGrabAttach.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\GrabAttachMechanics\VRTK_RotatorTrackGrabAttach.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\GrabAttachMechanics\VRTK_SpringJointGrabAttach.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\GrabAttachMechanics\VRTK_TrackObjectGrabAttach.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\SecondaryControllerGrabActions\VRTK_AxisScaleGrabAction.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\SecondaryControllerGrabActions\VRTK_BaseGrabAction.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\SecondaryControllerGrabActions\VRTK_ControlDirectionGrabAction.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\SecondaryControllerGrabActions\VRTK_SwapControllerGrabAction.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\VRTK_IgnoreInteractTouchColliders.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\VRTK_InteractableListener.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\VRTK_InteractableObject.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\VRTK_InteractControllerAppearance.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\VRTK_InteractHaptics.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\VRTK_InteractObjectAppearance.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\VRTK_InteractObjectHighlighter.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactables\VRTK_ObjectTouchAutoInteract.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactors\VRTK_ControllerEvents.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactors\VRTK_ControllerHighlighter.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactors\VRTK_ControllerTrackedCollider.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactors\VRTK_InteractGrab.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactors\VRTK_InteractNearTouch.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactors\VRTK_InteractTouch.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactors\VRTK_InteractUse.cs
+Assets\VRTK\Source\Scripts\Interactions\Interactors\VRTK_ObjectAutoGrab.cs
+Assets\VRTK\Source\Scripts\Interactions\VRTK_ControllerHaptics.cs
+Assets\VRTK\Source\Scripts\Interactions\VRTK_ObjectAppearance.cs
+Assets\VRTK\Source\Scripts\Internal\Attributes\MinMaxRangeAttribute.cs
+Assets\VRTK\Source\Scripts\Internal\Attributes\ObsoleteInspectorAttribute.cs
+Assets\VRTK\Source\Scripts\Internal\DataTypes\Limits2D.cs
+Assets\VRTK\Source\Scripts\Internal\DataTypes\Vector3State.cs
+Assets\VRTK\Source\Scripts\Internal\VRTK_CollisionTracker.cs
+Assets\VRTK\Source\Scripts\Internal\VRTK_ControllerReference.cs
+Assets\VRTK\Source\Scripts\Internal\VRTK_CurveGenerator.cs
+Assets\VRTK\Source\Scripts\Internal\VRTK_Defines.cs
+Assets\VRTK\Source\Scripts\Internal\VRTK_EventSystem.cs
+Assets\VRTK\Source\Scripts\Internal\VRTK_Logger.cs
+Assets\VRTK\Source\Scripts\Internal\VRTK_ObjectCache.cs
+Assets\VRTK\Source\Scripts\Internal\VRTK_PlayerObject.cs
+Assets\VRTK\Source\Scripts\Internal\VRTK_RoomExtender_PlayAreaGizmo.cs
+Assets\VRTK\Source\Scripts\Internal\VRTK_ScreenFade.cs
+Assets\VRTK\Source\Scripts\Internal\VRTK_SDKControllerReady.cs
+Assets\VRTK\Source\Scripts\Internal\VRTK_TrackedController.cs
+Assets\VRTK\Source\Scripts\Internal\VRTK_TrackedHeadset.cs
+Assets\VRTK\Source\Scripts\Internal\VRTK_TunnelEffect.cs
+Assets\VRTK\Source\Scripts\Internal\VRTK_UIGraphicRaycaster.cs
+Assets\VRTK\Source\Scripts\Internal\VRTK_VRInputModule.cs
+Assets\VRTK\Source\Scripts\Locomotion\ObjectControlActions\VRTK_BaseObjectControlAction.cs
+Assets\VRTK\Source\Scripts\Locomotion\ObjectControlActions\VRTK_RotateObjectControlAction.cs
+Assets\VRTK\Source\Scripts\Locomotion\ObjectControlActions\VRTK_SlideObjectControlAction.cs
+Assets\VRTK\Source\Scripts\Locomotion\ObjectControlActions\VRTK_SnapRotateObjectControlAction.cs
+Assets\VRTK\Source\Scripts\Locomotion\ObjectControlActions\VRTK_WarpObjectControlAction.cs
+Assets\VRTK\Source\Scripts\Locomotion\VRTK_BasicTeleport.cs
+Assets\VRTK\Source\Scripts\Locomotion\VRTK_ButtonControl.cs
+Assets\VRTK\Source\Scripts\Locomotion\VRTK_DashTeleport.cs
+Assets\VRTK\Source\Scripts\Locomotion\VRTK_DragWorld.cs
+Assets\VRTK\Source\Scripts\Locomotion\VRTK_HeightAdjustTeleport.cs
+Assets\VRTK\Source\Scripts\Locomotion\VRTK_MoveInPlace.cs
+Assets\VRTK\Source\Scripts\Locomotion\VRTK_ObjectControl.cs
+Assets\VRTK\Source\Scripts\Locomotion\VRTK_PlayerClimb.cs
+Assets\VRTK\Source\Scripts\Locomotion\VRTK_RoomExtender.cs
+Assets\VRTK\Source\Scripts\Locomotion\VRTK_SlingshotJump.cs
+Assets\VRTK\Source\Scripts\Locomotion\VRTK_StepMultiplier.cs
+Assets\VRTK\Source\Scripts\Locomotion\VRTK_TeleportDisableOnControllerObscured.cs
+Assets\VRTK\Source\Scripts\Locomotion\VRTK_TeleportDisableOnHeadsetCollision.cs
+Assets\VRTK\Source\Scripts\Locomotion\VRTK_TouchpadControl.cs
+Assets\VRTK\Source\Scripts\Locomotion\VRTK_TunnelOverlay.cs
+Assets\VRTK\Source\Scripts\Pointers\PointerRenderers\VRTK_BasePointerRenderer.cs
+Assets\VRTK\Source\Scripts\Pointers\PointerRenderers\VRTK_BezierPointerRenderer.cs
+Assets\VRTK\Source\Scripts\Pointers\PointerRenderers\VRTK_StraightPointerRenderer.cs
+Assets\VRTK\Source\Scripts\Pointers\VRTK_DestinationMarker.cs
+Assets\VRTK\Source\Scripts\Pointers\VRTK_PlayAreaCursor.cs
+Assets\VRTK\Source\Scripts\Pointers\VRTK_Pointer.cs
+Assets\VRTK\Source\Scripts\Presence\VRTK_BodyPhysics.cs
+Assets\VRTK\Source\Scripts\Presence\VRTK_HeadsetCollision.cs
+Assets\VRTK\Source\Scripts\Presence\VRTK_HeadsetCollisionFade.cs
+Assets\VRTK\Source\Scripts\Presence\VRTK_HeadsetControllerAware.cs
+Assets\VRTK\Source\Scripts\Presence\VRTK_HeadsetFade.cs
+Assets\VRTK\Source\Scripts\Presence\VRTK_HipTracking.cs
+Assets\VRTK\Source\Scripts\Presence\VRTK_PositionRewind.cs
+Assets\VRTK\Source\Scripts\UI\VRTK_UICanvas.cs
+Assets\VRTK\Source\Scripts\UI\VRTK_UIDraggableItem.cs
+Assets\VRTK\Source\Scripts\UI\VRTK_UIDropZone.cs
+Assets\VRTK\Source\Scripts\UI\VRTK_UIPointer.cs
+Assets\VRTK\Source\Scripts\Utilities\ControllerModelSettings\VRTK_ControllerElementHighlighters.cs
+Assets\VRTK\Source\Scripts\Utilities\ControllerModelSettings\VRTK_ControllerModelElementPaths.cs
+Assets\VRTK\Source\Scripts\Utilities\ObjectFollow\VRTK_ObjectFollow.cs
+Assets\VRTK\Source\Scripts\Utilities\ObjectFollow\VRTK_RigidbodyFollow.cs
+Assets\VRTK\Source\Scripts\Utilities\ObjectFollow\VRTK_TransformFollow.cs
+Assets\VRTK\Source\Scripts\Utilities\SDK\VRTK_SDKInfo.cs
+Assets\VRTK\Source\Scripts\Utilities\SDK\VRTK_SDKManager.cs
+Assets\VRTK\Source\Scripts\Utilities\SDK\VRTK_SDKSetup.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_BaseControllable_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_BasicTeleport_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_BodyPhysics_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_Button_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_Control_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_ControlAnimationGrabAttach_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_ControllerEvents_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_ControllerRigidbodyActivator_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_ControllerTooltips_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_DashTeleport_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_DestinationMarker_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_DestinationPoint_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_HeadsetCollision_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_HeadsetControllerAware_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_HeadsetFade_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_InteractableObject_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_InteractControllerAppearance_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_InteractGrab_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_InteractHaptics_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_InteractNearTouch_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_InteractObjectAppearance_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_InteractObjectHighlighter_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_InteractTouch_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_InteractUse_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_MoveTransformGrabAttach_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_ObjectAutoGrab_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_ObjectControl_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_ObjectTooltip_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_PlayAreaCursor_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_PlayerClimb_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_Pointer_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_PointerDirectionIndicator_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_PositionRewind_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_RotateTransformGrabAttach_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_SDKManager_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_SDKSetup_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_SlingshotJump_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_SnapDropZone_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_UIDraggableItem_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_UIPointer_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\UnityEvents\VRTK_UnityEvents.cs
+Assets\VRTK\Source\Scripts\Utilities\VRTK_AdaptiveQuality.cs
+Assets\VRTK\Source\Scripts\Utilities\VRTK_CustomRaycast.cs
+Assets\VRTK\Source\Scripts\Utilities\VRTK_DeviceFinder.cs
+Assets\VRTK\Source\Scripts\Utilities\VRTK_NavMeshData.cs
+Assets\VRTK\Source\Scripts\Utilities\VRTK_PolicyList.cs
+Assets\VRTK\Source\Scripts\Utilities\VRTK_SDKInputOverride.cs
+Assets\VRTK\Source\Scripts\Utilities\VRTK_SDKObjectAlias.cs
+Assets\VRTK\Source\Scripts\Utilities\VRTK_SDKObjectState.cs
+Assets\VRTK\Source\Scripts\Utilities\VRTK_SDKTransformModify.cs
+Assets\VRTK\Source\Scripts\Utilities\VRTK_SharedMethods.cs
+Assets\VRTK\Source\Scripts\Utilities\VRTK_Simulator.cs
+Assets\VRTK\Source\Scripts\Utilities\VRTK_VelocityEstimator.cs
+Assets\VRTK\Source\SDK\Base\SDK_Base.cs
+Assets\VRTK\Source\SDK\Base\SDK_BaseBoundaries.cs
+Assets\VRTK\Source\SDK\Base\SDK_BaseController.cs
+Assets\VRTK\Source\SDK\Base\SDK_BaseHeadset.cs
+Assets\VRTK\Source\SDK\Base\SDK_BaseSystem.cs
+Assets\VRTK\Source\SDK\Base\SDK_DescriptionAttribute.cs
+Assets\VRTK\Source\SDK\Base\SDK_ScriptingDefineSymbolPredicateAttribute.cs
+Assets\VRTK\Source\SDK\Daydream\DaydreamReach.cs
+Assets\VRTK\Source\SDK\Daydream\SDK_DaydreamBoundaries.cs
+Assets\VRTK\Source\SDK\Daydream\SDK_DaydreamController.cs
+Assets\VRTK\Source\SDK\Daydream\SDK_DaydreamDefines.cs
+Assets\VRTK\Source\SDK\Daydream\SDK_DaydreamHeadset.cs
+Assets\VRTK\Source\SDK\Daydream\SDK_DaydreamSystem.cs
+Assets\VRTK\Source\SDK\Fallback\SDK_FallbackBoundaries.cs
+Assets\VRTK\Source\SDK\Fallback\SDK_FallbackController.cs
+Assets\VRTK\Source\SDK\Fallback\SDK_FallbackHeadset.cs
+Assets\VRTK\Source\SDK\Fallback\SDK_FallbackSystem.cs
+Assets\VRTK\Source\SDK\HyperealVR\SDK_HyperealVRBoundaries.cs
+Assets\VRTK\Source\SDK\HyperealVR\SDK_HyperealVRController.cs
+Assets\VRTK\Source\SDK\HyperealVR\SDK_HyperealVRDefines.cs
+Assets\VRTK\Source\SDK\HyperealVR\SDK_HyperealVRHeadset.cs
+Assets\VRTK\Source\SDK\HyperealVR\SDK_HyperealVRSystem.cs
+Assets\VRTK\Source\SDK\Oculus\SDK_OculusBoundaries.cs
+Assets\VRTK\Source\SDK\Oculus\SDK_OculusController.cs
+Assets\VRTK\Source\SDK\Oculus\SDK_OculusDefines.cs
+Assets\VRTK\Source\SDK\Oculus\SDK_OculusHeadset.cs
+Assets\VRTK\Source\SDK\Oculus\SDK_OculusSystem.cs
+Assets\VRTK\Source\SDK\Simulator\SDK_ControllerSim.cs
+Assets\VRTK\Source\SDK\Simulator\SDK_InputSimulator.cs
+Assets\VRTK\Source\SDK\Simulator\SDK_SimBoundaries.cs
+Assets\VRTK\Source\SDK\Simulator\SDK_SimController.cs
+Assets\VRTK\Source\SDK\Simulator\SDK_SimHeadset.cs
+Assets\VRTK\Source\SDK\Simulator\SDK_SimSystem.cs
+Assets\VRTK\Source\SDK\SteamVR\SDK_SteamVRBoundaries.cs
+Assets\VRTK\Source\SDK\SteamVR\SDK_SteamVRController.cs
+Assets\VRTK\Source\SDK\SteamVR\SDK_SteamVRDefines.cs
+Assets\VRTK\Source\SDK\SteamVR\SDK_SteamVRHeadset.cs
+Assets\VRTK\Source\SDK\SteamVR\SDK_SteamVRSystem.cs
+Assets\VRTK\Source\SDK\Unity\SDK_UnityBoundaries.cs
+Assets\VRTK\Source\SDK\Unity\SDK_UnityCameraRig.cs
+Assets\VRTK\Source\SDK\Unity\SDK_UnityController.cs
+Assets\VRTK\Source\SDK\Unity\SDK_UnityControllerTracker.cs
+Assets\VRTK\Source\SDK\Unity\SDK_UnityHeadset.cs
+Assets\VRTK\Source\SDK\Unity\SDK_UnityHeadsetTracker.cs
+Assets\VRTK\Source\SDK\Unity\SDK_UnitySystem.cs
+Assets\VRTK\Source\SDK\VRTK_SDK_Bridge.cs
+Assets\VRTK\Source\SDK\WindowsMR\Resources\InteractionSourceExtensions.cs
+Assets\VRTK\Source\SDK\WindowsMR\Resources\WindowsApiChecker.cs
+Assets\VRTK\Source\SDK\WindowsMR\Resources\WindowsMR_Camera.cs
+Assets\VRTK\Source\SDK\WindowsMR\Resources\WindowsMR_ControllerManager.cs
+Assets\VRTK\Source\SDK\WindowsMR\Resources\WindowsMR_TrackedObject.cs
+Assets\VRTK\Source\SDK\WindowsMR\SDK_WindowsMRBoundaries.cs
+Assets\VRTK\Source\SDK\WindowsMR\SDK_WindowsMRController.cs
+Assets\VRTK\Source\SDK\WindowsMR\SDK_WindowsMRDefines.cs
+Assets\VRTK\Source\SDK\WindowsMR\SDK_WindowsMRHeadset.cs
+Assets\VRTK\Source\SDK\WindowsMR\SDK_WindowsMRSystem.cs
+Assets\VRTK\Source\SDK\Ximmerse\SDK_XimmerseBoundaries.cs
+Assets\VRTK\Source\SDK\Ximmerse\SDK_XimmerseController.cs
+Assets\VRTK\Source\SDK\Ximmerse\SDK_XimmerseDefines.cs
+Assets\VRTK\Source\SDK\Ximmerse\SDK_XimmerseHeadset.cs
+Assets\VRTK\Source\SDK\Ximmerse\SDK_XimmerseSystem.cs

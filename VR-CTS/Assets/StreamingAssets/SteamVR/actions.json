@@ -46,16 +46,13 @@
       "type": "boolean"
     },
     {
+      "name": "/actions/default/in/TouchpadPosition",
+      "type": "vector2",
+      "requirement": "mandatory"
+    },
+    {
       "name": "/actions/default/in/Teleport",
       "type": "boolean"
-    },
-    {
-      "name": "/actions/default/in/Move",
-      "type": "vector2"
-    },
-    {
-      "name": "/actions/default/in/Walk",
-      "type": "vector1"
     },
     {
       "name": "/actions/default/out/Haptic",
