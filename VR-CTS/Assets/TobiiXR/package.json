@@ -1,0 +1,10 @@
+{
+    "name": "com.tobii.xr.sdk",
+    "displayName": "Tobii XR SDK",
+    "version": "1.8.0",
+    "unity": "2018.2",
+    "description": "Tobii XR SDK",
+    "keywords": [
+        "tobii"
+    ]
+}

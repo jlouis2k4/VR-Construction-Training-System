@@ -41,7 +41,7 @@ public class VRController : MonoBehaviour
     
         HandleHeight();
         CalculateMovement();
-        SnapRotateion();
+        fluidMovement();
 
     }
 
@@ -102,7 +102,7 @@ public class VRController : MonoBehaviour
 
     }
 
-    private void SnapRotateion() {
+    private void fluidMovement() {
         float snapValue = 0.0f;
 
         if (m_RotatePress.GetStateDown(SteamVR_Input_Sources.LeftHand))
