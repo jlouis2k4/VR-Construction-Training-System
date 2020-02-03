@@ -18,7 +18,12 @@ public class Pointer : MonoBehaviour
 
 	private void Update()
     {
-        UpdateLine();
+		if (PauseMenu.LevelIsPaused) {
+			UpdateLine();
+			if (m_Dot.activeInHierarchy == false) m_Dot.SetActive(true);
+		} else {
+			if (m_Dot.activeInHierarchy == true) m_Dot.SetActive(false);
+		}
     }
 
 	private void UpdateLine() {
