@@ -8,10 +8,10 @@ public class PauseMenu : MonoBehaviour
     public static bool LevelIsPaused = false;
 
 	public GameObject PauseMenuUI;
+    public Transform HeadsetCamera;
     public SteamVR_Input_Sources m_TargetSource;
     public SteamVR_Action_Boolean m_PauseAction;
 
-    // Update is called once per frame
     void Update()
     {
         if (m_PauseAction.GetStateDown(m_TargetSource))
@@ -28,6 +28,9 @@ public class PauseMenu : MonoBehaviour
 	}
 
 	public void Pause() {
+        Vector3 headsetRot = HeadsetCamera.rotation.eulerAngles;
+        transform.rotation = Quaternion.Euler(headsetRot.x, headsetRot.y, 0);
+        transform.position = HeadsetCamera.position + HeadsetCamera.TransformDirection(0, 0, 2);
 		PauseMenuUI.SetActive(true);
 		Time.timeScale = 0f;
 		LevelIsPaused = true;

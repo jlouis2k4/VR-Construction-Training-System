@@ -213,3 +213,4 @@ C:\Users\DAQuser\Desktop\VR-CTS\VR-Construction-Training-System\VR-CTS\obj\Debug
 C:\Users\DAQuser\Desktop\VR-CTS\VR-Construction-Training-System\VR-CTS\obj\Debug\SteamVR.csproj.CopyComplete
 C:\Users\DAQuser\Desktop\VR-CTS\VR-Construction-Training-System\VR-CTS\obj\Debug\SteamVR.dll
 C:\Users\DAQuser\Desktop\VR-CTS\VR-Construction-Training-System\VR-CTS\obj\Debug\SteamVR.pdb
+C:\Users\DAQuser\Desktop\VR-CTS\VR-Construction-Training-System\VR-CTS\Temp\bin\Debug\Tobii.Research.Mono.dll

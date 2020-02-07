@@ -218,3 +218,11 @@ C:\Users\DAQuser\Desktop\VR-CTS\VR-Construction-Training-System\VR-CTS\obj\Debug
 C:\Users\DAQuser\Desktop\VR-CTS\VR-Construction-Training-System\VR-CTS\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\DAQuser\Desktop\VR-CTS\VR-Construction-Training-System\VR-CTS\obj\Debug\Assembly-CSharp.dll
 C:\Users\DAQuser\Desktop\VR-CTS\VR-Construction-Training-System\VR-CTS\obj\Debug\Assembly-CSharp.pdb
+C:\Users\DAQuser\Desktop\VR-CTS\VR-Construction-Training-System\VR-CTS\Temp\bin\Debug\Tobii.Research.Mono.dll
+C:\Users\DAQuser\Desktop\VR-CTS\VR-Construction-Training-System\VR-CTS\Temp\bin\Debug\TobiiXREditor.pdb
+C:\Users\DAQuser\Desktop\VR-CTS\VR-Construction-Training-System\VR-CTS\Temp\bin\Debug\TobiiXRSDK.pdb
+C:\Users\DAQuser\Desktop\VR-CTS\VR-Construction-Training-System\VR-CTS\Temp\bin\Debug\GazeModifierEditor.pdb
+C:\Users\DAQuser\Desktop\VR-CTS\VR-Construction-Training-System\VR-CTS\Temp\bin\Debug\TobiiXRCore.pdb
+C:\Users\DAQuser\Desktop\VR-CTS\VR-Construction-Training-System\VR-CTS\Temp\bin\Debug\TobiiXRInternalEditor.pdb
+C:\Users\DAQuser\Desktop\VR-CTS\VR-Construction-Training-System\VR-CTS\Temp\bin\Debug\TobiiXRG2OM.pdb
+C:\Users\DAQuser\Desktop\VR-CTS\VR-Construction-Training-System\VR-CTS\Temp\bin\Debug\TobiiXRDevTools.pdb

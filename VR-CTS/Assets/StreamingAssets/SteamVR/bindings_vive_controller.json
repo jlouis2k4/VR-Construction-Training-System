@@ -201,7 +201,7 @@
             {
                "inputs" : {
                   "click" : {
-                     "output" : "/actions/default/in/teleport"
+                     "output" : "/actions/default/in/snap"
                   }
                },
                "mode" : "button",
@@ -217,11 +217,7 @@
                "path" : "/user/hand/left/input/application_menu"
             },
             {
-               "inputs" : {
-                  "click" : {
-                     "output" : "/actions/default/in/pause"
-                  }
-               },
+               "inputs" : {},
                "mode" : "button",
                "path" : "/user/hand/right/input/application_menu"
             }

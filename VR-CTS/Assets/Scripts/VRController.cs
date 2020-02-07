@@ -6,13 +6,14 @@ using Valve.VR;
 public class VRController : MonoBehaviour
 {
     public float m_Sensitivity = 0.1f;
-    public float m_MaxSpeed = 1.0f;
+    public float m_MaxSpeed = 3.0f;
     public float m_Gravity = 30.0f;
-    public float m_RotateIncrement = 90;
+    public float m_RotateIncrement = 15f;
 
-    public SteamVR_Action_Boolean m_RotatePress = null;
+    public SteamVR_Action_Boolean m_MoveTouch = null;
     public SteamVR_Action_Boolean m_MovePress = null;
     public SteamVR_Action_Vector2 m_MoveValue = null;
+   
 
     private float m_Speed = 0.0f;
 
@@ -42,6 +43,7 @@ public class VRController : MonoBehaviour
         HandleHeight();
         CalculateMovement();
         fluidMovement();
+
 
     }
 
@@ -105,15 +107,16 @@ public class VRController : MonoBehaviour
     private void fluidMovement() {
         float snapValue = 0.0f;
 
-        if (m_RotatePress.GetStateDown(SteamVR_Input_Sources.LeftHand))
+        if (m_MoveTouch.GetStateDown(SteamVR_Input_Sources.LeftHand))
             snapValue = -Mathf.Abs(m_RotateIncrement);
 
-        if (m_RotatePress.GetStateDown(SteamVR_Input_Sources.RightHand))
-            snapValue = -Mathf.Abs(m_RotateIncrement);
+        if (m_MoveTouch.GetStateDown(SteamVR_Input_Sources.RightHand))
+            snapValue = Mathf.Abs(m_RotateIncrement);
 
         transform.RotateAround(m_Head.position, Vector3.up, snapValue);
     }
 
+   
 
 
 }
