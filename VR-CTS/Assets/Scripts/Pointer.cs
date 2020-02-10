@@ -5,7 +5,9 @@ using UnityEngine.EventSystems;
 
 public class Pointer : MonoBehaviour
 {
-	public float m_DefaultLength = 5.0f;
+    private static int activeMenuCounter = 0;
+
+    public float m_DefaultLength = 5.0f;
 	public GameObject m_Dot;
 	public VRInputModule m_InputModule;
 
@@ -18,7 +20,7 @@ public class Pointer : MonoBehaviour
 
 	private void Update()
     {
-		if (PauseMenu.LevelIsPaused) {
+		if (activeMenuCounter > 0) {
             m_LineRenderer.enabled = true;
             if (m_Dot.activeInHierarchy == false) m_Dot.SetActive(true);
             UpdateLine();
@@ -60,4 +62,11 @@ public class Pointer : MonoBehaviour
 		Physics.Raycast(ray, out hit, m_DefaultLength);
 		return hit;
 	}
+
+    public static void MenuIsActive(bool isActive) {
+        if (isActive) {
+            activeMenuCounter++;
+        }
+        else activeMenuCounter--;
+    }
 }
