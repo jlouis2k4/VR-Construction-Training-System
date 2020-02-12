@@ -6,7 +6,8 @@ namespace RLD
 {
     public class RTPrefabScrollView : MonoBehaviour
     {
-        public delegate void PrefabPreviewClickedHandler(RTPrefab prefab);
+        //VRCTS
+        public delegate void PrefabPreviewClickedHandler(RTPrefab prefab, string libName);
         public delegate void PrefabPreviewHoverEnterHandler(RTPrefab prefab);
         public delegate void PrefabPreviewHoverExitHandler(RTPrefab prefab);
 
@@ -17,6 +18,10 @@ namespace RLD
         private ObjectPool _previewButtonPool;
         private GameObject _gridObject;
         private GridLayoutGroup _gridLayoutGroup;
+
+        //VRCTS
+        private string _currentLib;
+        public string CurrentLib { get { return _currentLib; } }
 
         public void AddPrefabPreview(RTPrefab prefab)
         {
@@ -52,6 +57,7 @@ namespace RLD
             ClearPreviews();
             if (prefabLib != null)
             {
+                _currentLib = prefabLib.Name;
                 for (int prefabIndex = 0; prefabIndex < prefabLib.NumPrefabs; ++prefabIndex)
                 {
                     RTPrefab prefab = prefabLib.GetPrefab(prefabIndex);
@@ -81,7 +87,8 @@ namespace RLD
                     RTPrefabPreviewButton prefabPreviewBtn = uiElement.gameObject.GetComponent<RTPrefabPreviewButton>();
                     if (prefabPreviewBtn != null)
                     {
-                        if (PrefabPreviewClicked != null) PrefabPreviewClicked(prefabPreviewBtn.Prefab);
+                        //VRCTS
+                        if (PrefabPreviewClicked != null) PrefabPreviewClicked(prefabPreviewBtn.Prefab, _currentLib);
                         break;
                     }
                 }

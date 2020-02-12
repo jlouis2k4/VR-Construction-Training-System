@@ -63,6 +63,7 @@ namespace RLD
             foreach(var sceneObject in sceneObjects)
             {
                 GameObject unityPrefab = GameObject.Instantiate(sceneObject);
+
                 Texture2D prefabPreview = RTPrefabLibDb.Get.EditorPrefabPreviewGen.Generate(unityPrefab);
                 unityPrefab.SetActive(false);
 

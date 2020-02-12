@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SavableObject : MonoBehaviour
 {
-	public objType type;
+	public string lib;
 	public string objName;
 
 	void Awake()

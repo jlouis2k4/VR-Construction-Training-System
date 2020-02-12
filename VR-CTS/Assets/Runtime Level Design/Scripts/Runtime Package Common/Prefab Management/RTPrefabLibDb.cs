@@ -317,15 +317,27 @@ namespace RLD
                 _runtimeUI.PrefabScrollView.ClearPreviews();
         }
 
-        private void OnPrefabPreviewButtonClicked(RTPrefab prefab)
+        private void OnPrefabPreviewButtonClicked(RTPrefab prefab, string libName)
         {
             if (Settings.SpawnPrefabOnPreviewClick)
             {
                 var spawnedObject = ObjectSpawnUtil.SpawnInFrontOfCamera(prefab.UnityPrefab, RTFocusCamera.Get.TargetCamera, ObjectSpawnUtil.DefaultConfig);
+                //VRCTS
+                SetSavableObj(spawnedObject, libName);
                 var action = new PostObjectSpawnAction(new List<GameObject>() { spawnedObject });
                 action.Execute();
 
                 if (PrefabSpawned != null) PrefabSpawned(prefab, spawnedObject);
+            }
+        }
+        //VRCTS
+        private void SetSavableObj(GameObject obj, string libName)
+        {
+            obj.AddComponent<SavableObject>();
+            SavableObject savable = obj.GetComponent<SavableObject>();
+            if (savable != null)
+            {
+                savable.lib = libName;
             }
         }
     }

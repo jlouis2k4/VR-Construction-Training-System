@@ -25,10 +25,10 @@ public class SavableData
 	public float Ry { get; set; }
 	public float Rz { get; set; }
 	public float Rw { get; set; }
-	public int Type { get; set; }
+	public string Lib { get; set; }
 	public string Name { get; set; }
 
-	public SavableData(float ax, float ay, float az, float arx, float ary, float arz, float arw, int atype, string aname)
+	public SavableData(float ax, float ay, float az, float arx, float ary, float arz, float arw, string alib, string aname)
 	{
 		X = ax;
 		Y = ay;
@@ -37,13 +37,13 @@ public class SavableData
 		Ry = ary;
 		Rz = arz;
 		Rw = arw;
-		Type = atype;
+		Lib = alib;
 		Name = aname;
 	}
 
 	public override string ToString()
 	{
-		return ("x: " + X + " y: " + Y + " z: " + Z + " type: " + Type);
+		return ("x: " + X + " y: " + Y + " z: " + Z + " path: /" + Lib + "/" + Name);
 	}
 }
 
@@ -81,14 +81,19 @@ public class SavableList : MonoBehaviour
 		}
 		if (Input.GetKeyDown(KeyCode.L))
 		{
-			try
+            myObjectList.Clear();
+            try
 			{
 				using (Stream stream = File.Open(Application.dataPath + "/Saves/" + levelName + ".bin", FileMode.Open))
 				{
 					var binForm = new BinaryFormatter();
 
 					myObjectList = (List<SavableData>)binForm.Deserialize(stream);
-					foreach (SavableData obj in myObjectList) SpawnMyObject(obj);
+                    foreach (SavableData obj in myObjectList)
+                    {
+                        Debug.Log(obj.ToString());
+                        SpawnMyObject(obj);
+                    }
 				}
 				Debug.Log("Loaded!");
 			}
@@ -100,13 +105,10 @@ public class SavableList : MonoBehaviour
 		}
 		if (Input.GetKeyDown(KeyCode.D))
 		{
-			foreach (Transform child in transform)
+			SavableObject[] savables = GameObject.FindObjectsOfType<SavableObject>();
+			if (savables != null)
 			{
-				SavableObject curData = child.gameObject.GetComponent("SavableObject") as SavableObject;
-				if (curData != null)
-				{
-					Destroy(child.gameObject);
-				}
+				foreach(SavableObject sav in savables) Destroy(sav.gameObject);
 			}
 			Debug.Log("Destroyed!");
 		}
@@ -114,40 +116,29 @@ public class SavableList : MonoBehaviour
 
 	void SpawnMyObject(SavableData data)
 	{
-		string path;
 		Vector3 pos = new Vector3(data.X, data.Y, data.Z);
 		Quaternion rot = new Quaternion(data.Rx, data.Ry, data.Rz, data.Rw);
-		switch ((objType)data.Type)
-		{
-			case objType.hazard:
-				path = Constants.HAZARD_PATH + data.Name;
-				break;
-			case objType.item:
-				path = Constants.ITEM_PATH + data.Name;
-				break;
-			default:
-				path = Constants.PLAYER_PATH + data.Name;
-				break;
-		}
-		Instantiate(Resources.Load(path), pos, rot, transform);
+		Instantiate(Resources.Load(data.Lib + "/" + data.Name), pos, rot, transform);
 	}
 
 	void CompileSaveData()
 	{
-        SavableObject curData;
 		myObjectList.Clear();
-		foreach (Transform child in transform)
+		
+		SavableObject[] savables = GameObject.FindObjectsOfType<SavableObject>();
+		if (savables != null)
 		{
-			curData = child.gameObject.GetComponent("SavableObject") as SavableObject;
-			if (curData != null)
-			{
-				myObjectList.Add(new SavableData(
-					child.position.x, child.position.y, child.position.z,
-					child.rotation.x, child.rotation.y, child.rotation.z, child.rotation.w,
-					(int)(curData.type), curData.objName));
+            foreach (SavableObject sav in savables)
+            {
+                myObjectList.Add(new SavableData(
+                    sav.transform.position.x, sav.transform.position.y, sav.transform.position.z,
+                    sav.transform.rotation.x, sav.transform.rotation.y, sav.transform.rotation.z, sav.transform.rotation.w,
+                    sav.lib, sav.objName.Remove(sav.objName.Length - 7)));
+                Debug.Log(" path: /" + sav.lib + "/" + sav.objName.Remove(sav.objName.Length - 7));
+            }
 
 
-			}
 		}
+		
 	}
 }
