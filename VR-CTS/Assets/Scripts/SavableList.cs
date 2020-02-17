@@ -49,10 +49,15 @@ public class SavableData
 
 public class SavableList : MonoBehaviour
 {
-	public string levelName = "test"; // could also be made to work with the path to the file
+	public string levelName; // could also be made to work with the path to the file
 	public List<SavableData> myObjectList;
 
-	void Start()
+    private void Awake()
+    {
+        levelName = GlobalData.LevelName;
+    }
+
+    void Start()
 	{
 		myObjectList = new List<SavableData>();
 
