@@ -28,8 +28,12 @@ public class LevelEditorMenu : MonoBehaviour
 		Debug.Log("Attempting to save level: " + nameInputField.text);
 		bool success = levelManagerList.TrySaveLevel(nameInputField.text);
 		if (!success) {
-			overwriteMenu.SetActive(true);
-			menuFields.SetActive(false);
+			OverwriteMenu overMenu = overwriteMenu.GetComponent<OverwriteMenu>();
+			if (overMenu != null) {
+				overMenu.UpdateText(nameInputField.text);
+				overwriteMenu.SetActive(true);
+				menuFields.SetActive(false);
+			}
 		}
 	}
 
