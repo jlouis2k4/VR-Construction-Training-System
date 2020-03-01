@@ -44,7 +44,7 @@ public class MainMenu : MonoBehaviour
     {
         if (GlobalData.LevelName != null)
         {
-            if (Application.isEditor)
+			if (Application.isEditor)
             {
                 EditorSceneManager.LoadScene(EDITOR_SCENE, LoadSceneMode.Single);
             }
@@ -58,16 +58,15 @@ public class MainMenu : MonoBehaviour
     public void CreateLevel()
     {
         GlobalData.LevelName = null;
+        if (Application.isEditor)
         {
-            if (Application.isEditor)
-            {
-                EditorSceneManager.LoadScene(EDITOR_SCENE, LoadSceneMode.Single);
-            }
-            else
-            {
-                SceneManager.LoadScene(EDITOR_SCENE, LoadSceneMode.Single);
-            }
+            EditorSceneManager.LoadScene(EDITOR_SCENE, LoadSceneMode.Single);
         }
+        else
+        {
+            SceneManager.LoadScene(EDITOR_SCENE, LoadSceneMode.Single);
+        }
+        
     }
 
     public void DeleteLevel()

@@ -41,7 +41,10 @@ public class SavableData
 public class SavableList : MonoBehaviour
 {
 	public string levelName; // could also be made to work with the path to the file
-	public List<SavableData> myObjectList;
+	public bool isPlayMode = false;
+	public ObjectiveManager objectiveManager; // only use if in PlayMode
+	private List<SavableData> myObjectList;
+	private List<Hazard> myHazardList;
 
     private void Awake()
     {
@@ -49,6 +52,9 @@ public class SavableList : MonoBehaviour
 		levelName = GlobalData.LevelName;
 		if (levelName != null) {
 			bool success = TryLoadLevel();
+			if (success && isPlayMode) {
+				objectiveManager.PopulateObjectives(myHazardList);
+			}
 		}
     }
 	/*
@@ -109,11 +115,24 @@ public class SavableList : MonoBehaviour
 	}
 	*/
 
-	void SpawnMyObject(SavableData data)
+	GameObject SpawnMyObject(SavableData data)
 	{
 		Vector3 pos = new Vector3(data.X, data.Y, data.Z);
 		Quaternion rot = new Quaternion(data.Rx, data.Ry, data.Rz, data.Rw);
-		Instantiate(Resources.Load(data.Lib + "/" + data.Name), pos, rot, transform);
+		GameObject obj = Instantiate(Resources.Load(data.Lib + "/" + data.Name), pos, rot, transform) as GameObject;
+		SavableObject savable = obj.GetComponent<SavableObject>();
+		if (savable == null)
+		{
+			obj.AddComponent<SavableObject>();
+		}
+		savable.lib = data.Lib;
+		if (isPlayMode) {
+			Hazard hazard = obj.GetComponent<Hazard>();
+			if (hazard != null) {
+				myHazardList.Add(hazard);
+			}
+		}
+		return obj;
 	}
 
 	void CompileSaveData()

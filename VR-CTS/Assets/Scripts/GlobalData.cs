@@ -12,4 +12,5 @@ public static class GlobalData
 			_levelName = value;
 		}
 	}
+
 }
