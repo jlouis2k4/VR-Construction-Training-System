@@ -17,6 +17,7 @@ public class ObjectiveManager : MonoBehaviour
 	}
 
 	public void PopulateObjectives(List<Hazard> hazards) {
+        Debug.Log("Populating Hazard Counter with " + hazards.Count + " hazards");
 		int[] hazardCountArray = new int[Enum.GetValues(typeof(HazType)).Length];
 		for (int i = 0; i < hazardCountArray.Length; i++) {
 			hazardCountArray[i] = 0;

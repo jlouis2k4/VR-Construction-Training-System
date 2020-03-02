@@ -12,30 +12,26 @@ public class ObjectivesListUI : MonoBehaviour
 	public int textOffset;
 
 	private int[] hazardCompleted;
-	private int[] hazardTotals;
-
-	public void Awake()
-	{
-		hazardCountTexts = new Text[Enum.GetValues(typeof(HazType)).Length];
-		hazardCompleted = new int[Enum.GetValues(typeof(HazType)).Length];
-		for (int i = 0; i < hazardCompleted.Length; i++) {
-			hazardCompleted[i] = 0;
-		}
-	}
-
+	public int[] hazardTotals;
 
 	public void RecordHazards(int[] hazardCountArray) {
-		GameObject curObject;
-		int currentOffset = 0;
-		hazardTotals = hazardCountArray;
-		for (int i = 0; i <= hazardCountArray.Length; i++) {
-			if (hazardCountArray[i] > 0) {
-				curObject = Instantiate(hazardText, new Vector3(anchor.position.x, anchor.position.y - currentOffset, anchor.position.z), anchor.rotation) as GameObject;
-				curObject.transform.SetParent(anchor);
-				hazardCountTexts[i] = curObject.GetComponent<Text>();
-				SetHazardText(i);
-			}
-		}
+        GameObject curObject;
+        int curOffset = 0;
+        int count = hazardCountArray.Length;
+        hazardCountTexts = new Text[count];
+        hazardCompleted = new int[count];
+        hazardTotals = new int[count];
+        for (int i = 0; i < hazardCountArray.Length; i++) {
+            hazardCompleted[i] = 0;
+            hazardTotals[i] = hazardCountArray[i];
+            if (hazardTotals[i] > 0) {
+                curObject = (GameObject)Instantiate(hazardText, anchor.transform);
+                curObject.transform.Translate(new Vector3(0, -1*curOffset, 0));
+                curOffset += textOffset;
+                hazardCountTexts[i] = (Text)curObject.GetComponent<Text>();
+                SetHazardText(i);
+            }
+        }
 	}
 
 	public void UpdateCompletedCount(bool completed, int index) {
@@ -45,6 +41,6 @@ public class ObjectivesListUI : MonoBehaviour
 	}
 
 	public void SetHazardText(int index) {
-		hazardCountTexts[index].text = Enum.GetName(typeof(HazType), index) + " Hazards Resolved: " + hazardTotals[index] + "/" + hazardTotals[index];
+		hazardCountTexts[index].text = Enum.GetName(typeof(HazType), index) + " Hazards Resolved: " + hazardCompleted[index] + "/" + hazardTotals[index];
 	}
 }

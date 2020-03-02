@@ -49,71 +49,16 @@ public class SavableList : MonoBehaviour
     private void Awake()
     {
 		myObjectList = new List<SavableData>();
+        myHazardList = new List<Hazard>();
 		levelName = GlobalData.LevelName;
 		if (levelName != null) {
 			bool success = TryLoadLevel();
 			if (success && isPlayMode) {
+                Debug.Log("Play Mode");
 				objectiveManager.PopulateObjectives(myHazardList);
 			}
 		}
     }
-	/*
-	// Update is called once per frame 
-	void Update()
-	{
-		if (Input.GetKeyDown(KeyCode.S))
-		{
-			try
-			{
-				using (Stream stream = File.Open(Application.dataPath + "/Saves/" + levelName + ".bin", FileMode.Create))
-				{
-					var binForm = new BinaryFormatter();
-					CompileSaveData();
-					binForm.Serialize(stream, myObjectList);
-				}
-				Debug.Log("Saved!");
-			}
-			catch (Exception ex)
-			{
-				Debug.Log(ex.ToString());
-			}
-
-		}
-		if (Input.GetKeyDown(KeyCode.L))
-		{
-            myObjectList.Clear();
-            try
-			{
-				using (Stream stream = File.Open(Application.dataPath + "/Saves/" + levelName + ".bin", FileMode.Open))
-				{
-					var binForm = new BinaryFormatter();
-
-					myObjectList = (List<SavableData>)binForm.Deserialize(stream);
-                    foreach (SavableData obj in myObjectList)
-                    {
-                        Debug.Log(obj.ToString());
-                        SpawnMyObject(obj);
-                    }
-				}
-				Debug.Log("Loaded!");
-			}
-			catch (Exception ex)
-			{
-				Debug.Log(ex.ToString());
-			}
-
-		}
-		if (Input.GetKeyDown(KeyCode.D))
-		{
-			SavableObject[] savables = GameObject.FindObjectsOfType<SavableObject>();
-			if (savables != null)
-			{
-				foreach(SavableObject sav in savables) Destroy(sav.gameObject);
-			}
-			Debug.Log("Destroyed!");
-		}
-	}
-	*/
 
 	GameObject SpawnMyObject(SavableData data)
 	{
@@ -123,9 +68,11 @@ public class SavableList : MonoBehaviour
 		SavableObject savable = obj.GetComponent<SavableObject>();
 		if (savable == null)
 		{
-			obj.AddComponent<SavableObject>();
+			savable = obj.AddComponent<SavableObject>();
 		}
+        Debug.Log("Load From Lib: " + data.Lib);
 		savable.lib = data.Lib;
+        savable.objName = data.Name;
 		if (isPlayMode) {
 			Hazard hazard = obj.GetComponent<Hazard>();
 			if (hazard != null) {
@@ -147,12 +94,13 @@ public class SavableList : MonoBehaviour
                 myObjectList.Add(new SavableData(
                     sav.transform.position.x, sav.transform.position.y, sav.transform.position.z,
                     sav.transform.rotation.x, sav.transform.rotation.y, sav.transform.rotation.z, sav.transform.rotation.w,
-                    sav.lib, sav.objName.Remove(sav.objName.Length - 7)));
-                Debug.Log(" path: /" + sav.lib + "/" + sav.objName.Remove(sav.objName.Length - 7));
+                    sav.lib, sav.objName));
+                Debug.Log(" path: /" + sav.lib + "/" + sav.objName);
+                //.Remove(sav.objName.Length - 7)
             }
 
 
-		}
+        }
 		
 	}
 

@@ -35,6 +35,10 @@ namespace RLD
 
             GameObject spawned = GameObject.Instantiate(sourceObject, spherePos + fromCenterToPos, sourceObject.transform.rotation) as GameObject;
             spawned.SetActive(true);
+
+            //VRCTS
+            spawned.name = sourceObject.name;
+
             OBB spawnedOBB = ObjectBounds.CalcHierarchyWorldOBB(spawned, boundsQConfig);
             Ray ray = new Ray(camera.transform.position, (spawnedOBB.Center - camera.transform.position).normalized);
             var raycastFilter = new SceneRaycastFilter();

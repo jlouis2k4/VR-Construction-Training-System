@@ -20,7 +20,17 @@ public class Hazard : MonoBehaviour
 	[HideInInspector] public HazardCompletedEvent HazardEvent = new HazardCompletedEvent();
 
 	private bool isCompleted = false;
-	public HazType type = HazType.Other;
+    public bool Completed {
+        get {
+            return isCompleted;
+        }
+        set {
+            isCompleted = value;
+            HazardEvent.Invoke(value, type);
+        }
+    }
+
+    public HazType type = HazType.Other;
 	
 	public HazType GetHazType() {
 		return type;
@@ -28,11 +38,6 @@ public class Hazard : MonoBehaviour
 
 	public bool HasBeenCompleted() {
 		return isCompleted;
-	}
-
-	public void SetCompletionStatus(bool completed) {
-		isCompleted = completed;
-		HazardEvent.Invoke(completed, type);
 	}
 
 }
