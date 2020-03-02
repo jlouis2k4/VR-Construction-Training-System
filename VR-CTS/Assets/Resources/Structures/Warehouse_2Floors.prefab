@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &170341589206731061
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1132330993025936857}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 752986551173513526}
+  m_Layer: 0
+  m_Name: FloorGiantX2 (2) (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &752986551173513526
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1132330993025936857}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170341589206731061}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7866203105341691283}
+  m_Father: {fileID: 1132330992620791668}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1132330992620791669
 GameObject:
   m_ObjectHideFlags: 0
@@ -27,7 +58,7 @@ Transform:
   m_LocalPosition: {x: 18.6, y: 0, z: -62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 7866203105341691283}
+  - {fileID: 752986551173513526}
   - {fileID: 1936255625723892893}
   - {fileID: 7157334710572951141}
   - {fileID: 3094561691524835492}
@@ -40,7 +71,7 @@ Transform:
   - {fileID: 1127658527583382499}
   - {fileID: 1127658528123392062}
   - {fileID: 1127658526879218812}
-  - {fileID: 7866203105928886794}
+  - {fileID: 3624170746696557536}
   - {fileID: 1127954825267119866}
   - {fileID: 1127954824658683498}
   - {fileID: 1127954824305101284}
@@ -54,6 +85,99 @@ Transform:
   - {fileID: 1127954824146546183}
   - {fileID: 1127954824966937099}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3749305087577194377
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1132330993025936857}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7866203105341691283}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7866203105341691283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 7105702771110623306, guid: 7a7518c68f15e3a42ba6b0f598f7075a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1132330993025936857}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3749305087577194377}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 752986551173513526}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6363624347413694765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1132330991364964928}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3624170746696557536}
+  m_Layer: 0
+  m_Name: FloorGiantX2 (3) (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3624170746696557536
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1132330991364964928}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6363624347413694765}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7866203105928886794}
+  m_Father: {fileID: 1132330992620791668}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8334352170343197149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1132330991364964928}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7866203105928886794}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7866203105928886794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 7105702771110623306, guid: 7a7518c68f15e3a42ba6b0f598f7075a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1132330991364964928}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8334352170343197149}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3624170746696557536}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1132330991348167288
@@ -126,11 +250,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1132330992620791668}
     m_Modifications:
-    - target: {fileID: 7100727239720548728, guid: 7a7518c68f15e3a42ba6b0f598f7075a,
-        type: 3}
-      propertyPath: m_Name
-      value: FloorGiantX2 (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 7105702771110623306, guid: 7a7518c68f15e3a42ba6b0f598f7075a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -186,14 +305,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7100727239720548728, guid: 7a7518c68f15e3a42ba6b0f598f7075a,
+        type: 3}
+      propertyPath: m_Name
+      value: FloorGiantX2 (3)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a7518c68f15e3a42ba6b0f598f7075a, type: 3}
---- !u!4 &7866203105928886794 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7105702771110623306, guid: 7a7518c68f15e3a42ba6b0f598f7075a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1132330991364964928}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1132330991460717239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1438,11 +1556,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1132330992620791668}
     m_Modifications:
-    - target: {fileID: 7100727239720548728, guid: 7a7518c68f15e3a42ba6b0f598f7075a,
-        type: 3}
-      propertyPath: m_Name
-      value: FloorGiantX2 (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 7105702771110623306, guid: 7a7518c68f15e3a42ba6b0f598f7075a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1498,14 +1611,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7100727239720548728, guid: 7a7518c68f15e3a42ba6b0f598f7075a,
+        type: 3}
+      propertyPath: m_Name
+      value: FloorGiantX2 (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a7518c68f15e3a42ba6b0f598f7075a, type: 3}
---- !u!4 &7866203105341691283 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7105702771110623306, guid: 7a7518c68f15e3a42ba6b0f598f7075a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1132330993025936857}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1132330993050591914
 PrefabInstance:
   m_ObjectHideFlags: 0
