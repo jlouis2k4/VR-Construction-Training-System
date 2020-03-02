@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using System.IO;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,6 +14,7 @@ public class MainMenu : MonoBehaviour
 
     public GameObject mainMenu;
     public GameObject levelMenu;
+	public LevelListController levelList;
 
     private bool mainMenuEnabled = true;
     private bool levelMenuEnabled = false;
@@ -41,7 +44,7 @@ public class MainMenu : MonoBehaviour
     {
         if (GlobalData.LevelName != null)
         {
-            if (Application.isEditor)
+			if (Application.isEditor)
             {
                 EditorSceneManager.LoadScene(EDITOR_SCENE, LoadSceneMode.Single);
             }
@@ -55,21 +58,29 @@ public class MainMenu : MonoBehaviour
     public void CreateLevel()
     {
         GlobalData.LevelName = null;
+        if (Application.isEditor)
         {
-            if (Application.isEditor)
-            {
-                EditorSceneManager.LoadScene(EDITOR_SCENE, LoadSceneMode.Single);
-            }
-            else
-            {
-                SceneManager.LoadScene(EDITOR_SCENE, LoadSceneMode.Single);
-            }
+            EditorSceneManager.LoadScene(EDITOR_SCENE, LoadSceneMode.Single);
         }
+        else
+        {
+            SceneManager.LoadScene(EDITOR_SCENE, LoadSceneMode.Single);
+        }
+        
     }
 
     public void DeleteLevel()
     {
-        if (GlobalData.LevelName != null) Debug.Log("TODO: Delete " + GlobalData.LevelName);
+        if (GlobalData.LevelName != null) {
+			try {
+				File.Delete(Application.dataPath + "/Saves/" + GlobalData.LevelName + ".bin");
+				levelList.refreshFiles();
+			}
+			catch (Exception ex)
+			{
+				Debug.Log(ex.ToString());	
+			}
+		}
     }
 
     public void SwapMenus()

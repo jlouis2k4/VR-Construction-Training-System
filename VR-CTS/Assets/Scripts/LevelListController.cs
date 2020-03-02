@@ -13,16 +13,7 @@ public class LevelListController : MonoBehaviour
 
     private void Awake()
     {
-        int dirLength = Application.dataPath.Length + FileDirectory.Length + 2;
-        string curString;
-        textItems = new List<GameObject>();
-        var files = Directory.GetFiles(Application.dataPath + '/' + FileDirectory);
-        foreach (string file in files)
-        {
-            if (file.Contains("meta")) continue;
-            curString = file.Remove(0, dirLength);
-            LogText(curString.Remove(curString.Length - 4));
-        }
+        refreshFiles();
     }
 
     public void LogText(string newText)
@@ -35,4 +26,17 @@ public class LevelListController : MonoBehaviour
 
         textItems.Add(newTextItem);
     }
+
+	public void refreshFiles() {
+		int dirLength = Application.dataPath.Length + FileDirectory.Length + 2;
+		string curString;
+		textItems = new List<GameObject>();
+		var files = Directory.GetFiles(Application.dataPath + '/' + FileDirectory);
+		foreach (string file in files)
+		{
+			if (file.Contains("meta")) continue;
+			curString = file.Remove(0, dirLength);
+			LogText(curString.Remove(curString.Length - 4));
+		}
+	}
 }

@@ -6,15 +6,6 @@ using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using System.Runtime.Serialization;
 
-public enum objType
-{
-	nullObject = 0,
-	hazard = 1,
-	item = 2,
-	player = 3,
-	structure = 4,
-}
-
 [Serializable]
 public class SavableData
 {
@@ -50,19 +41,23 @@ public class SavableData
 public class SavableList : MonoBehaviour
 {
 	public string levelName; // could also be made to work with the path to the file
-	public List<SavableData> myObjectList;
+	public bool isPlayMode = false;
+	public ObjectiveManager objectiveManager; // only use if in PlayMode
+	private List<SavableData> myObjectList;
+	private List<Hazard> myHazardList;
 
     private void Awake()
     {
-        levelName = GlobalData.LevelName;
-    }
-
-    void Start()
-	{
 		myObjectList = new List<SavableData>();
-
-	}
-
+		levelName = GlobalData.LevelName;
+		if (levelName != null) {
+			bool success = TryLoadLevel();
+			if (success && isPlayMode) {
+				objectiveManager.PopulateObjectives(myHazardList);
+			}
+		}
+    }
+	/*
 	// Update is called once per frame 
 	void Update()
 	{
@@ -118,12 +113,26 @@ public class SavableList : MonoBehaviour
 			Debug.Log("Destroyed!");
 		}
 	}
+	*/
 
-	void SpawnMyObject(SavableData data)
+	GameObject SpawnMyObject(SavableData data)
 	{
 		Vector3 pos = new Vector3(data.X, data.Y, data.Z);
 		Quaternion rot = new Quaternion(data.Rx, data.Ry, data.Rz, data.Rw);
-		Instantiate(Resources.Load(data.Lib + "/" + data.Name), pos, rot, transform);
+		GameObject obj = Instantiate(Resources.Load(data.Lib + "/" + data.Name), pos, rot, transform) as GameObject;
+		SavableObject savable = obj.GetComponent<SavableObject>();
+		if (savable == null)
+		{
+			obj.AddComponent<SavableObject>();
+		}
+		savable.lib = data.Lib;
+		if (isPlayMode) {
+			Hazard hazard = obj.GetComponent<Hazard>();
+			if (hazard != null) {
+				myHazardList.Add(hazard);
+			}
+		}
+		return obj;
 	}
 
 	void CompileSaveData()
@@ -145,5 +154,68 @@ public class SavableList : MonoBehaviour
 
 		}
 		
+	}
+
+	//Tries to serialize objects into .bin file. If a file already exists with the same name, it returns false, otherwise true
+	public bool TrySaveLevel(string newName) {
+		try
+		{
+			using (Stream stream = File.Open(Application.dataPath + "/Saves/" + newName + ".bin", FileMode.CreateNew))
+			{
+				var binForm = new BinaryFormatter();
+				CompileSaveData();
+				binForm.Serialize(stream, myObjectList);
+			}
+			Debug.Log("Saved!");
+			return true;
+		}
+		catch (Exception ex)
+		{
+			Debug.Log(ex.ToString());
+			return false;
+		}
+	}
+
+	//Serializes objects into .bin file, overwriting a file with the same name
+	public void SaveCurrentLevel(string curName) {
+		try
+		{
+			using (Stream stream = File.Open(Application.dataPath + "/Saves/" + curName + ".bin", FileMode.Create))
+			{
+				var binForm = new BinaryFormatter();
+				CompileSaveData();
+				binForm.Serialize(stream, myObjectList);
+			}
+			Debug.Log("Saved!");
+		}
+		catch (Exception ex)
+		{
+			Debug.Log(ex.ToString());
+		}
+	}
+	
+	//Tries to load objects from .bin file. If file cannot be opened returns false, otherwise true
+	public bool TryLoadLevel() {
+		myObjectList.Clear();
+		try
+		{
+			using (Stream stream = File.Open(Application.dataPath + "/Saves/" + levelName + ".bin", FileMode.Open))
+			{
+				var binForm = new BinaryFormatter();
+
+				myObjectList = (List<SavableData>)binForm.Deserialize(stream);
+				foreach (SavableData obj in myObjectList)
+				{
+					Debug.Log(obj.ToString());
+					SpawnMyObject(obj);
+				}
+			}
+			return true;
+		}
+		catch (Exception ex)
+		{
+			Debug.Log(ex.ToString());
+			return false;
+		}
 	}
 }
