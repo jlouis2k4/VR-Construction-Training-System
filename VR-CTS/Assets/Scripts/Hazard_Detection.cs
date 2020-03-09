@@ -5,12 +5,19 @@ using UnityEngine.UI;
 public class Hazard_Detection : MonoBehaviour
 {
 
-    public Text myText;
+    public Text hazard_Panel;
+    public GameObject hazard_Menu_UI;
+    public GameObject death_Menu_UI;
+    private GameObject safety_item;
+    private bool pause_Game = false;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        death_Menu_UI.SetActive(false);
+        hazard_Menu_UI.SetActive(false);
+       
     }
 
     // Update is called once per frame
@@ -20,19 +27,83 @@ public class Hazard_Detection : MonoBehaviour
     {
 
     }
-
+    //checks to see if player collided with object of hazard, or 
+    //of death
+    /**    SCORE AND COMPLETENESS NEED TO BE IMPLEMENTED      **/
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "low")
-        { 
-            print(other.gameObject.name);
-            print("\n)");
-            if(other.gameObject.name == "SafteyGlasses")
-            {
-                myText.text = other.gameObject.name.ToString() + " Picked Up!";
-                Destroy(other.gameObject);
-
-            }
+        //calls function death if player collides with death object
+        if (other.gameObject.tag == "deathZone")
+        {
+            game_Over();
         }
+
+        if (other.gameObject.tag == "low")
+        {
+            safety_Gear_Interact(other.gameObject.name, 0);   
+        }
+    }
+
+    private void safety_Gear_Interact(string other, float check_equip)
+    {
+        
+            print(other);
+            hazard_Panel.text = " Pick Up " + other.ToString() + "?!";
+            hazard_Menu_UI.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            toggle_Time();
+      
+
+    }
+
+    public void equip()
+    {
+
+        toggle_Time();
+        hazard_Menu_UI.SetActive(false);
+        //destroy object and implement attaching to player;
+    }
+
+    public void dont_Equip()
+    {
+        toggle_Time();
+        hazard_Menu_UI.SetActive(false);
+        
+    }
+
+
+    public void game_Over()
+    {
+        //open death panel
+        death_Menu_UI.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        //stop time....
+        toggle_Time();
+    }
+
+
+    private void toggle_Time()
+    {
+        pause_Game = !pause_Game;
+
+        if (pause_Game)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+    }
+
+    public void Retry()
+    {
+
+        toggle_Time();
+        death_Menu_UI.SetActive(false);
+
     }
 }
