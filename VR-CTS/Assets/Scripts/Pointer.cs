@@ -68,5 +68,11 @@ public class Pointer : MonoBehaviour
             activeMenuCounter++;
         }
         else activeMenuCounter--;
+
+		if (activeMenuCounter > 0) {
+			GlobalData.PlayerCanMove = false;
+		} else {
+			GlobalData.PlayerCanMove = true;
+		}
     }
 }
