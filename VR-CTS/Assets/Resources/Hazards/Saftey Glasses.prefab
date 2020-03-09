@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2917553429998586816
+--- !u!1 &5660835457494221401
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,35 +8,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3665297684926205012}
+  - component: {fileID: 6066252400702670285}
+  - component: {fileID: 5660835457494221400}
   m_Layer: 0
-  m_Name: SafteyGlasses
+  m_Name: Saftey Glasses
   m_TagString: low
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3665297684926205012
+--- !u!4 &6066252400702670285
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2917553429998586816}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 53.222027, y: 1.3780471, z: -38.192028}
+  m_GameObject: {fileID: 5660835457494221401}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 53.71, y: 1.3, z: -44.2}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
-  - {fileID: 861632261148379855}
+  - {fileID: 7856328622174159702}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &5660907322052813269
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!65 &5660835457494221400
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5660835457494221401}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 20, z: 20}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &2917766925754132556
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3665297684926205012}
+    m_TransformParent: {fileID: 6066252400702670285}
     m_Modifications:
     - target: {fileID: -927199367670048503, guid: 1687ef5400b9e80448f8fde4b02c799e,
         type: 3}
@@ -100,9 +114,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1687ef5400b9e80448f8fde4b02c799e, type: 3}
---- !u!4 &861632261148379855 stripped
+--- !u!4 &7856328622174159702 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 1687ef5400b9e80448f8fde4b02c799e,
     type: 3}
-  m_PrefabInstance: {fileID: 5660907322052813269}
+  m_PrefabInstance: {fileID: 2917766925754132556}
   m_PrefabAsset: {fileID: 0}
