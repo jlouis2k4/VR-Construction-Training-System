@@ -87,8 +87,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7318714529956014409}
+  - component: {fileID: -4565993004016731390}
   - component: {fileID: 1985825126}
-  - component: {fileID: 1985825127}
   - component: {fileID: 1985825128}
   m_Layer: 0
   m_Name: safety_Cone
@@ -105,13 +105,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6037662226378283866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 55.45, y: 0.06, z: -37.97}
-  m_LocalScale: {x: 0.8, y: 1, z: 0.8}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3210147231451536157}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &-4565993004016731390
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037662226378283866}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.52, z: 0}
 --- !u!54 &1985825126
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -128,19 +141,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &1985825127
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6037662226378283866}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.4, z: 0}
 --- !u!23 &1985825128
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -235,6 +235,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+  - {fileID: -4127731988830720704, guid: 242f4a6cb0b37bb4aa2920634cef9e67, type: 3}
   - {fileID: -4127731988830720704, guid: 242f4a6cb0b37bb4aa2920634cef9e67, type: 3}
   - {fileID: 4320743417036909822, guid: 242f4a6cb0b37bb4aa2920634cef9e67, type: 3}
   m_StaticBatchInfo:

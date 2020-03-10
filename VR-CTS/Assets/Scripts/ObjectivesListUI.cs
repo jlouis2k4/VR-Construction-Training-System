@@ -9,14 +9,14 @@ public class ObjectivesListUI : MonoBehaviour
 	private Text[] hazardCountTexts;
 	public Transform anchor;
 	public GameObject hazardText;
-	public int textOffset;
+	public float textOffset;
 
 	private int[] hazardCompleted;
 	public int[] hazardTotals;
 
 	public void RecordHazards(int[] hazardCountArray) {
         GameObject curObject;
-        int curOffset = 0;
+        float curOffset = 0;
         int count = hazardCountArray.Length;
         hazardCountTexts = new Text[count];
         hazardCompleted = new int[count];

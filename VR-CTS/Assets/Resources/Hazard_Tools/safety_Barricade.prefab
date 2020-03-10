@@ -814,7 +814,7 @@ GameObject:
   - component: {fileID: 127962050}
   - component: {fileID: 127962052}
   m_Layer: 0
-  m_Name: Safety_Barricade
+  m_Name: safety_Barricade
   m_TagString: barricade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -828,7 +828,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6904368410217224496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 55.6, y: 0.66000015, z: -38.17}
+  m_LocalPosition: {x: 0, y: 0.66000015, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 7313650547478388685}

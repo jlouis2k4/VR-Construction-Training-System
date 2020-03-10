@@ -8,6 +8,7 @@ public class Hazard_Detection : MonoBehaviour
     public Text hazard_Panel;
     public GameObject hazard_Menu_UI;
     public GameObject death_Menu_UI;
+    public Transform player_Camera;
     private GameObject safety_item;
     private bool pause_Game = false;
 
@@ -40,15 +41,16 @@ public class Hazard_Detection : MonoBehaviour
 
         if (other.gameObject.tag == "low")
         {
-            safety_Gear_Interact(other.gameObject.name, 0);   
+            safety_Gear_Interact(other.gameObject);   
         }
     }
 
-    private void safety_Gear_Interact(string other, float check_equip)
+    private void safety_Gear_Interact(GameObject other)
     {
-        
-            print(other);
-            hazard_Panel.text = " Pick Up " + other.ToString() + "?!";
+            safety_item = other;
+           // print(other.name);
+            hazard_Panel.text = " Pick Up " + other.name.ToString() + "?!";
+            //safety_item.gameObject.tag = "untagged";
             hazard_Menu_UI.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -57,11 +59,29 @@ public class Hazard_Detection : MonoBehaviour
 
     }
 
+    //collison bug (needs fixings)
     public void equip()
     {
 
         toggle_Time();
         hazard_Menu_UI.SetActive(false);
+        Hazard hazard = safety_item.GetComponent<Hazard>();
+        if (hazard != null)
+        {
+            hazard.Completed = true;
+        }
+        if(safety_item.name == "Hard Hat")
+        {
+            //print(safety_item.name);
+            safety_item.transform.SetParent(player_Camera.transform);
+            safety_item.transform.SetPositionAndRotation(player_Camera.transform.position, player_Camera.transform.rotation);
+            safety_item.transform.position += new Vector3(0, 0.7f, 0);
+        }
+        else
+        {
+            Destroy(safety_item);
+
+        }
         //destroy object and implement attaching to player;
     }
 

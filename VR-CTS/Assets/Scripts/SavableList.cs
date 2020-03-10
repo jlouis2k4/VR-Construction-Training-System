@@ -79,6 +79,9 @@ public class SavableList : MonoBehaviour
 				myHazardList.Add(hazard);
 			}
 		}
+        else
+        {
+        }
 		return obj;
 	}
 

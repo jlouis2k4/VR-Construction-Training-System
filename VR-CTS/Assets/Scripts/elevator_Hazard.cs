@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class elevator_Hazard : MonoBehaviour
 {
+    private Hazard hazard;
+    
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        hazard = GetComponent<Hazard>();
     }
 
     // Update is called once per frame
@@ -23,8 +25,18 @@ public class elevator_Hazard : MonoBehaviour
         if(other.gameObject.tag == "barricade")
         {
             print(other.gameObject.name);
-            //call complete hazard function
-            //call score function
+            hazard.Completed = true; //communicates and updates score.
+
+        }
+      
+    }
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "barricade")
+        {
+            print(other.gameObject.name);
+            hazard.Completed = false;
+            
         }
     }
 }

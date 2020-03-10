@@ -36,8 +36,4 @@ public class Hazard : MonoBehaviour
 		return type;
 	}
 
-	public bool HasBeenCompleted() {
-		return isCompleted;
-	}
-
 }
