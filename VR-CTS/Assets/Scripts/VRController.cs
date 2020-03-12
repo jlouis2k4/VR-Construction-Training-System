@@ -6,14 +6,14 @@ using Valve.VR;
 public class VRController : MonoBehaviour
 {
     public float m_Sensitivity = 0.1f;
-    public float m_MaxSpeed = 3.0f;
+    public float m_MaxSpeed = 1.0f;
     public float m_Gravity = 30.0f;
-    public float m_RotateIncrement = 15f;
+    public float m_RotateIncrement = 90;
 
-    public SteamVR_Action_Boolean m_MoveTouch = null;
+    public SteamVR_Action_Boolean m_RotatePress1 = null;
+    public SteamVR_Action_Boolean m_RotatePress2 = null;
     public SteamVR_Action_Boolean m_MovePress = null;
     public SteamVR_Action_Vector2 m_MoveValue = null;
-   
 
     private float m_Speed = 0.0f;
 
@@ -24,7 +24,7 @@ public class VRController : MonoBehaviour
     private void Awake()
     {
         m_CharacterController = GetComponent<CharacterController>();
-        
+
     }
 
 
@@ -33,17 +33,16 @@ public class VRController : MonoBehaviour
     {
         m_CameraRig = SteamVR_Render.Top().origin;
         m_Head = SteamVR_Render.Top().head;
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-    
+
         HandleHeight();
         CalculateMovement();
         fluidMovement();
-
 
     }
 
@@ -63,6 +62,7 @@ public class VRController : MonoBehaviour
         newCenter.x = m_Head.localPosition.x;
         newCenter.z = m_Head.localPosition.z;
 
+        newCenter = Quaternion.Euler(0, -transform.eulerAngles.y, 0) * newCenter;
 
         //Apply
         m_CharacterController.center = newCenter;
@@ -71,16 +71,17 @@ public class VRController : MonoBehaviour
     private void CalculateMovement()
     {
         //Figure out movement orientation
-        
+
         Quaternion orientation = CalculateOrientation();
         Vector3 movement = Vector3.zero;
 
         //If not moving
-        if (m_MoveValue.axis.magnitude == 0) {
+        if (m_MoveValue.axis.magnitude == 0)
+        {
             m_Speed = 0;
         }
 
-   
+
         // Add, clamp
         m_Speed += m_MoveValue.axis.magnitude * m_Sensitivity;
         m_Speed = Mathf.Clamp(m_Speed, -m_MaxSpeed, m_MaxSpeed);
@@ -94,7 +95,8 @@ public class VRController : MonoBehaviour
     }
 
 
-    private Quaternion CalculateOrientation() {
+    private Quaternion CalculateOrientation()
+    {
         float rotation = Mathf.Atan2(m_MoveValue.axis.x, m_MoveValue.axis.y);
         rotation *= Mathf.Rad2Deg;
 
@@ -104,19 +106,23 @@ public class VRController : MonoBehaviour
 
     }
 
-    private void fluidMovement() {
+    private void fluidMovement()
+    {
         float snapValue = 0.0f;
 
-        if (m_MoveTouch.GetStateDown(SteamVR_Input_Sources.LeftHand))
+        if (m_RotatePress1.GetStateDown(SteamVR_Input_Sources.RightHand))
             snapValue = -Mathf.Abs(m_RotateIncrement);
 
-        if (m_MoveTouch.GetStateDown(SteamVR_Input_Sources.RightHand))
+        if (m_RotatePress2.GetStateDown(SteamVR_Input_Sources.RightHand))
             snapValue = Mathf.Abs(m_RotateIncrement);
 
         transform.RotateAround(m_Head.position, Vector3.up, snapValue);
     }
 
-   
+    private void SnapRotation()
+    {
+
+    }
 
 
 }
