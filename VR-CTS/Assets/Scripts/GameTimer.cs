@@ -15,6 +15,7 @@ public class GameTimer : MonoBehaviour
     {
         textClock = GetComponent<Text>();
 		timer = new Stopwatch();
+        
     }
 
 	public void StartTimer()

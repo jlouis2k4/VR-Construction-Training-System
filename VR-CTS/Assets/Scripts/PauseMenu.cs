@@ -21,6 +21,12 @@ public class PauseMenu : MonoBehaviour
             if (LevelIsPaused == true) Resume();
             else Pause();
         }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (LevelIsPaused == true) Resume();
+            else Pause();
+        }
     }
 
 	public void Resume() {
@@ -31,9 +37,9 @@ public class PauseMenu : MonoBehaviour
 	}
 
 	public void Pause() {
-        Vector3 headsetRot = HeadsetCamera.rotation.eulerAngles;
-        transform.rotation = Quaternion.Euler(headsetRot.x, headsetRot.y, 0);
-        transform.position = HeadsetCamera.position + HeadsetCamera.TransformDirection(0, 0, 2);
+        //Vector3 headsetRot = HeadsetCamera.rotation.eulerAngles;
+        //transform.rotation = Quaternion.Euler(headsetRot.x, headsetRot.y, 0);
+        //transform.position = HeadsetCamera.position + HeadsetCamera.TransformDirection(0, 0, 2);
 		PauseMenuUI.SetActive(true);
         Pointer.MenuIsActive(true);
 		Time.timeScale = 0f;

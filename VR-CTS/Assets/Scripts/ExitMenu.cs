@@ -12,15 +12,24 @@ public class ExitMenu : MonoBehaviour
 	public Text scoreText;
 	public ObjectiveManager objManager;
 
+
 	private void Awake() {
 		endLevelMenu.SetActive(false);
 		scoreMenu.SetActive(false);
 	}
 
-	public void EnableConfirmationMenu(Vector3 lookAt) {
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            EnableConfirmationMenu();
+        }
+    }
+
+    public void EnableConfirmationMenu() {
 		if (endLevelMenu.activeInHierarchy == false) {
 			endLevelMenu.SetActive(true);
-			transform.LookAt(lookAt, Vector3.up);
+			//transform.LookAt(new Vector3(0,1,-3), Vector3.up);
 			Pointer.MenuIsActive(true);
 		}
 	}
