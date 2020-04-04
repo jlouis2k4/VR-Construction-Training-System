@@ -13,6 +13,7 @@ public class Hazard_Detection : MonoBehaviour
     private bool pause_Game = false;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +42,10 @@ public class Hazard_Detection : MonoBehaviour
 
         if (other.gameObject.tag == "low")
         {
+            if(other.gameObject.name == "Hard Hat")
+            {
+                other.gameObject.tag = "Untagged";
+            }
             safety_Gear_Interact(other.gameObject);   
         }
     }

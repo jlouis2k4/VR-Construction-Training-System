@@ -18,8 +18,6 @@ public class elevator_Hazard : MonoBehaviour
         
     }
 
-    /**    SCORE AND COMPLETENESS NEED TO BE IMPLEMENTED      **/
-
     public void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "barricade")
