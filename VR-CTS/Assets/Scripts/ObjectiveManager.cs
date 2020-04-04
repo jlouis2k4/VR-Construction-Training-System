@@ -21,6 +21,7 @@ public class ObjectiveManager : MonoBehaviour
 		totalHazardCount = 0;
 		totalHazardCompleted = 0;
 		deathCount = 0;
+        gameTimer.StartTimer();
 	}
 
 	public void PopulateObjectives(List<Hazard> hazards) {
@@ -36,7 +37,6 @@ public class ObjectiveManager : MonoBehaviour
 			totalHazardCount++;
 		}
 		objectiveList.RecordHazards(hazardCountArray);
-		gameTimer.StartTimer();
 	}
 
 	public void HazardCompleted(bool completed, HazType hazType)
