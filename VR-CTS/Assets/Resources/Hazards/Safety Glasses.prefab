@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3574896913747252033}
   - component: {fileID: 3115486526571861204}
   m_Layer: 0
-  m_Name: Saftey Glasses
+  m_Name: Safety Glasses
   m_TagString: low
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,8 +43,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 20, y: 20, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10, y: 1, z: 20}
+  m_Center: {x: 0, y: 0, z: -4.81}
 --- !u!1 &4534893099965474761
 GameObject:
   m_ObjectHideFlags: 0
