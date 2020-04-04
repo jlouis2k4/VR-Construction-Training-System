@@ -42,10 +42,6 @@ public class Hazard_Detection : MonoBehaviour
 
         if (other.gameObject.tag == "low")
         {
-            if(other.gameObject.name == "Hard Hat")
-            {
-                other.gameObject.tag = "Untagged";
-            }
             safety_Gear_Interact(other.gameObject);   
         }
     }
@@ -75,8 +71,10 @@ public class Hazard_Detection : MonoBehaviour
         {
             hazard.Completed = true;
         }
-        if(safety_item.name == "Hard Hat")
+        if(safety_item.name == "Hard_Hat")
         {
+            safety_item.gameObject.tag = "Untagged";
+
             //print(safety_item.name);
             safety_item.transform.SetParent(player_Camera.transform);
             safety_item.transform.SetPositionAndRotation(player_Camera.transform.position, player_Camera.transform.rotation);
