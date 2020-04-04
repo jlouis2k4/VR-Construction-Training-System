@@ -9,9 +9,10 @@ public class Hazard_Detection : MonoBehaviour
     public GameObject hazard_Menu_UI;
     public GameObject death_Menu_UI;
     public Transform player_Camera;
-    private GameObject safety_item;
+    public GameObject safety_item = null;
     private bool pause_Game = false;
 
+    public PlayerIcon player_Icon;
 
 
     // Start is called before the first frame update
@@ -42,30 +43,45 @@ public class Hazard_Detection : MonoBehaviour
 
         if (other.gameObject.tag == "low")
         {
-            safety_Gear_Interact(other.gameObject);   
+            Debug.Log(other.gameObject.name);
+            if (safety_item == null)
+            {
+                safety_Gear_Interact(other.gameObject);
+
+            }
         }
     }
 
     private void safety_Gear_Interact(GameObject other)
     {
-            safety_item = other;
-           // print(other.name);
-            hazard_Panel.text = " Pick Up " + other.name.ToString() + "?!";
-            //safety_item.gameObject.tag = "untagged";
-            hazard_Menu_UI.SetActive(true);
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            toggle_Time();
-      
+        
+       
+        safety_item = other;
+        hazard_Panel.text = " Pick Up " + other.name.ToString() + "?!";
+        //safety_item.gameObject.tag = "untagged";
+        // Cursor.lockState = CursorLockMode.None;
+        //Cursor.visible = true;
+        Vector3 headsetRot = player_Camera.rotation.eulerAngles;
+        hazard_Menu_UI.transform.rotation = Quaternion.Euler(headsetRot.x, headsetRot.y, 0);
+        hazard_Menu_UI.transform.position = player_Camera.position + player_Camera.TransformDirection(0, 0, 2);
+        hazard_Menu_UI.SetActive(true);
+        Pointer.MenuIsActive(true);
+
+
+        
+       // toggle_Time();
+
+
+
 
     }
 
     //collison bug (needs fixings)
     public void equip()
     {
-
-        toggle_Time();
+        //toggle_Time();
         hazard_Menu_UI.SetActive(false);
+        Pointer.MenuIsActive(false);
         Hazard hazard = safety_item.GetComponent<Hazard>();
         if (hazard != null)
         {
@@ -79,18 +95,29 @@ public class Hazard_Detection : MonoBehaviour
             safety_item.transform.SetParent(player_Camera.transform);
             safety_item.transform.SetPositionAndRotation(player_Camera.transform.position, player_Camera.transform.rotation);
             safety_item.transform.position += new Vector3(0, 0.7f, 0);
-        }
-        else
-        {
-            Destroy(safety_item);
 
+            player_Icon.ToggleHardHat(true);
+            safety_item = null;
+        }
+        else if(safety_item.name == "Safety Vest")
+        {
+            player_Icon.ToggleVest(true);
+            Destroy(safety_item);
+            safety_item = null;
+
+        }
+        else if(safety_item.name == "Safety Glasses")
+        {
+            player_Icon.ToggleGoggles(true);
+            Destroy(safety_item);
+            safety_item = null;
         }
         //destroy object and implement attaching to player;
     }
 
     public void dont_Equip()
     {
-        toggle_Time();
+        //toggle_Time();
         hazard_Menu_UI.SetActive(false);
         
     }
