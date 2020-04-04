@@ -5,6 +5,10 @@
       "type": "boolean"
     },
     {
+      "name": "/actions/default/in/Teleport",
+      "type": "boolean"
+    },
+    {
       "name": "/actions/default/in/GrabPinch",
       "type": "boolean"
     },
@@ -47,17 +51,7 @@
     },
     {
       "name": "/actions/default/in/TouchpadPosition",
-      "type": "vector2",
-      "requirement": "mandatory"
-    },
-    {
-      "name": "/actions/default/in/Teleport",
-      "type": "boolean"
-    },
-    {
-      "name": "/actions/default/in/Pause",
-      "type": "boolean",
-      "requirement": "mandatory"
+      "type": "vector2"
     },
     {
       "name": "/actions/default/out/Haptic",
@@ -96,7 +90,7 @@
   "action_sets": [
     {
       "name": "/actions/default",
-      "usage": "single"
+      "usage": "leftright"
     },
     {
       "name": "/actions/platformer",
@@ -111,7 +105,56 @@
       "usage": "single"
     }
   ],
-  "default_bindings": [],
+  "default_bindings": [
+    {
+      "controller_type": "vive_controller",
+      "binding_url": "bindings_vive_controller.json"
+    },
+    {
+      "controller_type": "oculus_touch",
+      "binding_url": "bindings_oculus_touch.json"
+    },
+    {
+      "controller_type": "knuckles",
+      "binding_url": "bindings_knuckles.json"
+    },
+    {
+      "controller_type": "holographic_controller",
+      "binding_url": "bindings_holographic_controller.json"
+    },
+    {
+      "controller_type": "vive_cosmos_controller",
+      "binding_url": "bindings_vive_cosmos_controller.json"
+    },
+    {
+      "controller_type": "vive_cosmos",
+      "binding_url": "binding_vive_cosmos.json"
+    },
+    {
+      "controller_type": "vive",
+      "binding_url": "binding_vive.json"
+    },
+    {
+      "controller_type": "indexhmd",
+      "binding_url": "binding_index_hmd.json"
+    },
+    {
+      "controller_type": "vive_pro",
+      "binding_url": "binding_vive_pro.json"
+    },
+    {
+      "controller_type": "rift",
+      "binding_url": "binding_rift.json"
+    },
+    {
+      "controller_type": "holographic_hmd",
+      "binding_url": "binding_holographic_hmd.json"
+    },
+    {
+      "controller_type": "vive_tracker_camera",
+      "binding_url": "binding_vive_tracker_camera.json"
+    }
+  ],
   "localization": [
     {
       "language_tag": "en_US",
@@ -122,10 +165,11 @@
       "/actions/default/in/Pose": "Pose",
       "/actions/default/in/SkeletonLeftHand": "Skeleton (Left)",
       "/actions/default/in/SkeletonRightHand": "Skeleton (Right)",
+      "/actions/default/in/Teleport": "Teleport",
+      "/actions/default/out/Haptic": "Haptic",
       "/actions/platformer/in/Jump": "Jump",
       "/actions/default/in/SnapTurnLeft": "Snap Turn (Left)",
-      "/actions/default/in/SnapTurnRight": "Snap Turn (Right)",
-      "/actions/default/out/Haptic": "Haptic"
+      "/actions/default/in/SnapTurnRight": "Snap Turn (Right)"
     }
   ]
 }

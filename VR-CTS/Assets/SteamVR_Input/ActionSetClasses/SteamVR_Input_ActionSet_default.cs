@@ -25,6 +25,14 @@ namespace Valve.VR
             }
         }
         
+        public virtual SteamVR_Action_Boolean Teleport
+        {
+            get
+            {
+                return SteamVR_Actions.default_Teleport;
+            }
+        }
+        
         public virtual SteamVR_Action_Boolean GrabPinch
         {
             get
@@ -102,22 +110,6 @@ namespace Valve.VR
             get
             {
                 return SteamVR_Actions.default_TouchpadPosition;
-            }
-        }
-        
-        public virtual SteamVR_Action_Boolean Teleport
-        {
-            get
-            {
-                return SteamVR_Actions.default_Teleport;
-            }
-        }
-        
-        public virtual SteamVR_Action_Boolean Pause
-        {
-            get
-            {
-                return SteamVR_Actions.default_Pause;
             }
         }
         

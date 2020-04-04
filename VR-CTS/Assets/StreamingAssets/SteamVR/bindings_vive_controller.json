@@ -4,10 +4,6 @@
    "app_key" : "application.generated.unity.vrcts.exe",
    "bindings" : {
       "/actions/buggy" : {
-         "chords" : [],
-         "haptics" : [],
-         "poses" : [],
-         "skeleton" : [],
          "sources" : [
             {
                "inputs" : {
@@ -75,11 +71,11 @@
          "chords" : [],
          "haptics" : [
             {
-               "output" : "none",
+               "output" : "/actions/default/out/haptic",
                "path" : "/user/hand/left/output/haptic"
             },
             {
-               "output" : "none",
+               "output" : "/actions/default/out/haptic",
                "path" : "/user/hand/right/output/haptic"
             }
          ],
@@ -116,6 +112,20 @@
             {
                "inputs" : {
                   "click" : {
+                     "output" : "/actions/default/in/grabgrip"
+                  }
+               },
+               "mode" : "button",
+               "parameters" : {
+                  "click_activate_threshold" : "0.05",
+                  "click_deactivate_threshold" : "0",
+                  "force_input" : "force"
+               },
+               "path" : "/user/hand/left/input/grip"
+            },
+            {
+               "inputs" : {
+                  "click" : {
                      "output" : "/actions/default/in/grabpinch"
                   }
                },
@@ -126,33 +136,6 @@
                   "force_input" : "value"
                },
                "path" : "/user/hand/left/input/trigger"
-            },
-            {
-               "inputs" : {
-                  "pull" : {
-                     "output" : "/actions/default/in/squeeze"
-                  }
-               },
-               "mode" : "trigger",
-               "path" : "/user/hand/left/input/trigger"
-            },
-            {
-               "inputs" : {
-                  "center" : {
-                     "output" : "/actions/default/in/grabgrip"
-                  },
-                  "east" : {
-                     "output" : "/actions/default/in/snapturnright"
-                  },
-                  "west" : {
-                     "output" : "/actions/default/in/snapturnleft"
-                  }
-               },
-               "mode" : "dpad",
-               "parameters" : {
-                  "sub_mode" : "click"
-               },
-               "path" : "/user/hand/right/input/trackpad"
             },
             {
                "inputs" : {
@@ -170,7 +153,51 @@
                   }
                },
                "mode" : "button",
+               "parameters" : {
+                  "click_activate_threshold" : "0.75",
+                  "click_deactivate_threshold" : "0.7"
+               },
                "path" : "/user/hand/right/input/trigger"
+            },
+            {
+               "inputs" : {
+                  "east" : {
+                     "output" : "/actions/default/in/snapturnright"
+                  },
+                  "west" : {
+                     "output" : "/actions/default/in/snapturnleft"
+                  }
+               },
+               "mode" : "dpad",
+               "parameters" : {
+                  "deadzone_pct" : "90",
+                  "overlap_pct" : "15",
+                  "sub_mode" : "click"
+               },
+               "path" : "/user/hand/right/input/trackpad"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/grabgrip"
+                  }
+               },
+               "mode" : "button",
+               "parameters" : {
+                  "click_activate_threshold" : "0.05",
+                  "click_deactivate_threshold" : "0",
+                  "force_input" : "force"
+               },
+               "path" : "/user/hand/right/input/grip"
+            },
+            {
+               "inputs" : {
+                  "pull" : {
+                     "output" : "/actions/default/in/squeeze"
+                  }
+               },
+               "mode" : "trigger",
+               "path" : "/user/hand/left/input/trigger"
             },
             {
                "inputs" : {
@@ -183,9 +210,6 @@
             },
             {
                "inputs" : {
-                  "click" : {
-                     "output" : "/actions/default/in/pause"
-                  },
                   "position" : {
                      "output" : "/actions/default/in/touchpadposition"
                   }
@@ -194,40 +218,17 @@
                "path" : "/user/hand/left/input/trackpad"
             },
             {
-               "inputs" : {},
-               "mode" : "none",
-               "path" : "/user/hand/left/input/system"
-            },
-            {
                "inputs" : {
                   "click" : {
-                     "output" : "/actions/default/in/snap"
+                     "output" : "/actions/default/in/teleport"
                   }
                },
-               "mode" : "button",
-               "path" : "/user/hand/right/input/grip"
-            },
-            {
-               "inputs" : {
-                  "click" : {
-                     "output" : "/actions/default/in/pause"
-                  }
-               },
-               "mode" : "button",
+               "mode" : "toggle_button",
                "path" : "/user/hand/left/input/application_menu"
-            },
-            {
-               "inputs" : {},
-               "mode" : "button",
-               "path" : "/user/hand/right/input/application_menu"
             }
          ]
       },
       "/actions/platformer" : {
-         "chords" : [],
-         "haptics" : [],
-         "poses" : [],
-         "skeleton" : [],
          "sources" : [
             {
                "inputs" : {
@@ -270,7 +271,7 @@
    },
    "category" : "steamvr_input",
    "controller_type" : "vive_controller",
-   "description" : "Walking controls (need to implement walking)",
+   "description" : "",
    "name" : "My VR-CTS [Testing] configuration for Vive Controller",
    "options" : {},
    "simulated_actions" : []
