@@ -261,7 +261,7 @@ PrefabInstance:
     - target: {fileID: 6344087735511884714, guid: 4e68ddb507f12f64f80fc655f22116ee,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 0.579
       objectReference: {fileID: 0}
     - target: {fileID: 6344087735511884714, guid: 4e68ddb507f12f64f80fc655f22116ee,
         type: 3}
@@ -319,8 +319,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 819255188, guid: 4e68ddb507f12f64f80fc655f22116ee, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6344087735511884715, guid: 4e68ddb507f12f64f80fc655f22116ee,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1933984883}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e68ddb507f12f64f80fc655f22116ee, type: 3}
 --- !u!114 &385353630 stripped
@@ -521,6 +526,16 @@ PrefabInstance:
       propertyPath: gameTimer
       value: 
       objectReference: {fileID: 385353631}
+    - target: {fileID: 3173391643822120542, guid: 21aa8a29e2e71a845820f376a8f14190,
+        type: 3}
+      propertyPath: totalHazardCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173391643822120542, guid: 21aa8a29e2e71a845820f376a8f14190,
+        type: 3}
+      propertyPath: totalHazardCompleted
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1577757921879688973, guid: 21aa8a29e2e71a845820f376a8f14190,
         type: 3}
       propertyPath: isPlayMode
@@ -695,7 +710,7 @@ PrefabInstance:
     - target: {fileID: 799735358517250908, guid: 36ad756095e3eef4caa9c24375fb00e5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -1.353
       objectReference: {fileID: 0}
     - target: {fileID: 799735358517250908, guid: 36ad756095e3eef4caa9c24375fb00e5,
         type: 3}
@@ -787,6 +802,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 799735358517250909, guid: 36ad756095e3eef4caa9c24375fb00e5,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1933984883}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36ad756095e3eef4caa9c24375fb00e5, type: 3}
 --- !u!224 &799735358763902940 stripped

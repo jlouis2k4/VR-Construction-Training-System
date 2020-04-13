@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class ObjectiveManager : MonoBehaviour
 {
-	private const int MAX_TIME_SECONDS = 6039; // 99:99
-	private const int BASE_SCORE_MULTIPLIER = 10;
-	private const float POINTS_SECONDS_RATIO = 1 / 60; // number of points per number of seconds
+	private const int MAX_TIME_SECONDS = 7200; // 2 hours
+	private const int BASE_SCORE_MULTIPLIER = 1;
+	private const float POINTS_SECONDS_RATIO = 1 / 1; // number of points per number of seconds
 
 	public ObjectivesListUI objectiveList;
 	public GameTimer gameTimer;
@@ -21,7 +21,6 @@ public class ObjectiveManager : MonoBehaviour
 		totalHazardCount = 0;
 		totalHazardCompleted = 0;
 		deathCount = 0;
-        gameTimer.StartTimer();
 	}
 
 	public void PopulateObjectives(List<Hazard> hazards) {
@@ -57,8 +56,8 @@ public class ObjectiveManager : MonoBehaviour
 	}
 
 	public int GetScore () {
-		int timeScore = Mathf.FloorToInt(POINTS_SECONDS_RATIO * (MAX_TIME_SECONDS - gameTimer.getFinalTime()));
-		return BASE_SCORE_MULTIPLIER * (totalHazardCompleted - deathCount) + timeScore;
+		float timeScore = (POINTS_SECONDS_RATIO * (MAX_TIME_SECONDS - gameTimer.getFinalTime()));
+		return Mathf.FloorToInt(BASE_SCORE_MULTIPLIER * ((totalHazardCompleted - deathCount) * timeScore) / totalHazardCount);
 	}
 
 }

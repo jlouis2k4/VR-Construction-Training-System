@@ -36,11 +36,12 @@ public class ExitMenu : MonoBehaviour
 
 	public void YesEndLevel() {
 		endLevelMenu.SetActive(false);
+		scoreText.text = "Score: " + objManager.GetScore().ToString();
 		scoreMenu.SetActive(true);
+		
 	}
 
 	public void NoEndLevel() {
-		scoreText.text = "Score: " + objManager.GetScore().ToString();
 		endLevelMenu.SetActive(false);
 		Pointer.MenuIsActive(false);
 	}
