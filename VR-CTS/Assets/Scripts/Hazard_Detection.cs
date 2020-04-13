@@ -11,8 +11,10 @@ public class Hazard_Detection : MonoBehaviour
     public Transform player_Camera;
     public GameObject safety_item = null;
     private bool pause_Game = false;
+   // public GameObject respawn_Location;
 
     public PlayerIcon player_Icon;
+    public float collision_Timer;
 
 
     // Start is called before the first frame update
@@ -20,7 +22,11 @@ public class Hazard_Detection : MonoBehaviour
     {
         death_Menu_UI.SetActive(false);
         hazard_Menu_UI.SetActive(false);
-       
+        collision_Timer = 10f;
+       // print(respawn_Location.transform.position.x);
+       // print(respawn_Location.transform.position.y);
+       // print(respawn_Location.transform.position.z);
+
     }
 
     // Update is called once per frame
@@ -28,26 +34,34 @@ public class Hazard_Detection : MonoBehaviour
 
     void Update()
     {
-
+        collision_Timer += Time.deltaTime;
     }
     //checks to see if player collided with object of hazard, or 
     //of death
     /**    SCORE AND COMPLETENESS NEED TO BE IMPLEMENTED      **/
     private void OnTriggerEnter(Collider other)
     {
-        //calls function death if player collides with death object
-        if (other.gameObject.tag == "deathZone")
+        if (collision_Timer >= 10)
         {
-            game_Over();
-        }
+            safety_item = other.gameObject;
+            safety_item.SetActive(false);
 
-        if (other.gameObject.tag == "low")
-        {
-            Debug.Log(other.gameObject.name);
-            if (safety_item == null)
+            collision_Timer = 0;
+            //calls function death if player collides with death object
+            if (other.gameObject.tag == "deathZone")
             {
-                safety_Gear_Interact(other.gameObject);
+                
+                game_Over();
+            }
 
+            if (other.gameObject.tag == "low")
+            {
+               // Debug.Log(other.gameObject.name);
+                //if (safety_item == null)
+                //{
+                    safety_Gear_Interact(other.gameObject);
+
+                //}
             }
         }
     }
@@ -66,14 +80,7 @@ public class Hazard_Detection : MonoBehaviour
         hazard_Menu_UI.transform.position = player_Camera.position + player_Camera.TransformDirection(0, 0, 2);
         hazard_Menu_UI.SetActive(true);
         Pointer.MenuIsActive(true);
-
-
-        
        // toggle_Time();
-
-
-
-
     }
 
     //collison bug (needs fixings)
@@ -94,7 +101,6 @@ public class Hazard_Detection : MonoBehaviour
             //print(safety_item.name);
             safety_item.transform.SetParent(player_Camera.transform);
             safety_item.transform.SetPositionAndRotation(player_Camera.transform.position, player_Camera.transform.rotation);
-            safety_item.transform.position += new Vector3(0, 0.7f, 0);
 
             player_Icon.ToggleHardHat(true);
             safety_item = null;
@@ -117,6 +123,7 @@ public class Hazard_Detection : MonoBehaviour
 
     public void dont_Equip()
     {
+        safety_item.SetActive(true);
         //toggle_Time();
         hazard_Menu_UI.SetActive(false);
         
@@ -151,9 +158,11 @@ public class Hazard_Detection : MonoBehaviour
 
     public void Retry()
     {
-
+        
         toggle_Time();
+        safety_item.SetActive(true);
         death_Menu_UI.SetActive(false);
+        
 
     }
 }
