@@ -86,6 +86,7 @@ public class Hazard_Detection : MonoBehaviour
     //collison bug (needs fixings)
     public void equip()
     {
+		collision_Timer = 10f;
         //toggle_Time();
         hazard_Menu_UI.SetActive(false);
         Pointer.MenuIsActive(false);
