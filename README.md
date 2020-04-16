@@ -23,4 +23,4 @@ This program is being developed for the HTC Vive Pro Eye. Get your own for only 
 5. Select "Open" to open the File Explorer.
 6. Select the folder containing the Unity project.
 7. Unity should open the project. This may take a minute or two because the project contains many assets.
-8. If you have not used Unity before, this [video]("https://www.youtube.com/watch?v=QUCEcAp3h28" "Unity Tutorial") is a good place to start.
+8. If you have not used Unity before, this [video](https://www.youtube.com/watch?v=QUCEcAp3h28 "https://www.youtube.com/watch?v=QUCEcAp3h28") is a good place to start.
