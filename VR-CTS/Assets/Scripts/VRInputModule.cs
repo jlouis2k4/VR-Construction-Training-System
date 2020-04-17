@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using Valve.VR;
 
+/// <summary>
+/// Subclass of Unity's BaseInputModule that handles user input events in VR.
+/// </summary>
 public class VRInputModule : BaseInputModule {
     
 	public Camera m_Camera;
@@ -13,12 +16,20 @@ public class VRInputModule : BaseInputModule {
 	private GameObject m_CurrentObject = null;
 	private PointerEventData m_Data = null;
 
+	/// <summary>
+	/// Awake is called when the script instance is being loaded.
+	/// </summary>
 	protected override void Awake() {
 		base.Awake();
 
 		m_Data = new PointerEventData(eventSystem);
 	}
 
+	/// <summary>
+    /// Processes user input.
+    /// Treats the m_ClickAction action from the VR Controllers as a click from the mouse 
+    /// located at a raycast pointing where the user is aiming the controller with the Pointer attached.
+    /// </summary>
 	public override void Process() {
 		
 		// Reset Data, set Camera
@@ -43,10 +54,18 @@ public class VRInputModule : BaseInputModule {
 		if (m_ClickAction.GetStateUp(m_TargetSource)) ProcessRelease(m_Data);
 	}
 
+	/// <summary>
+    /// Returns current information about where the user is pointing.
+    /// </summary>
+    /// <returns></returns>
 	public PointerEventData GetData() {
 		return m_Data;
 	}
 
+	/// <summary>
+	/// Processes when the user presses down with the button attached to the m_clickAction action on the VR Controllers.
+	/// </summary>
+	/// <param name="data">current information about where the user is pointing.</param>
 	private void ProcessPress(PointerEventData data) {
 
 		// Set Raycast
@@ -60,13 +79,16 @@ public class VRInputModule : BaseInputModule {
 			newPointerPress = ExecuteEvents.GetEventHandler<IPointerClickHandler>(m_CurrentObject);
 		}
 
-
 		// Set data
 		data.pressPosition = data.position;
 		data.pointerPress = newPointerPress;
 		data.rawPointerPress = m_CurrentObject;
 	}
 
+	/// <summary>
+	/// Processes when the user presses releases the button attached to the m_clickAction action on the VR Controllers.
+	/// </summary>
+	/// <param name="data">current information about where the user is pointing.</param>
 	private void ProcessRelease(PointerEventData data) {
 
 		// Execute pointer up

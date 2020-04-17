@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+/// <summary>
+/// Class containing the behavior of the line pointer that extends
+/// from the VR Controller to help the user interact with VR menus.
+/// </summary>
 public class Pointer : MonoBehaviour
 {
-    private static int activeMenuCounter = 0;
+    // Static counter of how many menus are currently active in the scene.
+	private static int activeMenuCounter = 0;
 
     public float m_DefaultLength = 5.0f;
 	public GameObject m_Dot;
@@ -13,13 +18,20 @@ public class Pointer : MonoBehaviour
 
 	private LineRenderer m_LineRenderer;
 
+	/// <summary>
+	/// Awake is called when the script instance is being loaded.
+	/// </summary>
 	private void Awake()
 	{
 		m_LineRenderer = GetComponent<LineRenderer>();
 	}
 
+	/// <summary>
+	/// Update is called once every frame.
+	/// </summary>
 	private void Update()
     {
+		// If at least one menu is active in the level, enable the pointer.
 		if (activeMenuCounter > 0) {
             m_LineRenderer.enabled = true;
             if (m_Dot.activeInHierarchy == false) m_Dot.SetActive(true);
@@ -30,6 +42,9 @@ public class Pointer : MonoBehaviour
 		}
     }
 
+	/// <summary>
+    /// Update the line created via raycast pointing out from the VR Controller.
+    /// </summary>
 	private void UpdateLine() {
 		// Use default or distance
 		PointerEventData data = m_InputModule.GetData();
@@ -56,6 +71,11 @@ public class Pointer : MonoBehaviour
 		m_LineRenderer.SetPosition(1, endPosition);
 	}
 
+	/// <summary>
+    /// Create raycast of specified length that extends forward from this gameobject.
+    /// </summary>
+    /// <param name="length"> The length of the raycast to be created. </param>
+    /// <returns></returns>
 	private RaycastHit CreateRaycast(float length) {
 		RaycastHit hit;
 		Ray ray = new Ray(transform.position, transform.forward);
@@ -63,6 +83,11 @@ public class Pointer : MonoBehaviour
 		return hit;
 	}
 
+	/// <summary>
+    /// Static function that increments/decrements the number of active menus in the level.
+    /// Called from the menu scripts.
+    /// </summary>
+    /// <param name="isActive"> Whether the menu is active. </param>
     public static void MenuIsActive(bool isActive) {
         if (isActive) {
             activeMenuCounter++;
