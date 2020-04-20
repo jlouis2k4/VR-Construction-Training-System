@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//script for personal test level
 public class MouseLook : MonoBehaviour
 {
 

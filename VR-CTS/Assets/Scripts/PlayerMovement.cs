@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//script of player for testing assets and objects
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;

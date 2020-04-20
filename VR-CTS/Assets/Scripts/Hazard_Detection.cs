@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
+//anything that is commetted out probably has to do with respawning a player into the game again.
+//wasn't working at all even though could should've preformed as intended. still being implemented.
 public class Hazard_Detection : MonoBehaviour
 {
 
@@ -38,7 +41,6 @@ public class Hazard_Detection : MonoBehaviour
     }
     //checks to see if player collided with object of hazard, or 
     //of death
-    /**    SCORE AND COMPLETENESS NEED TO BE IMPLEMENTED      **/
     private void OnTriggerEnter(Collider other)
     {
         if (collision_Timer >= 10)
@@ -66,15 +68,15 @@ public class Hazard_Detection : MonoBehaviour
         }
     }
 
+    //sends message to canvas panel about current equipment being picked up
     private void safety_Gear_Interact(GameObject other)
     {
         
        
         safety_item = other;
         hazard_Panel.text = " Pick Up " + other.name.ToString() + "?!";
-        //safety_item.gameObject.tag = "untagged";
-        // Cursor.lockState = CursorLockMode.None;
-        //Cursor.visible = true;
+
+        //aligns menu panels with players current headset direction
         Vector3 headsetRot = player_Camera.rotation.eulerAngles;
         hazard_Menu_UI.transform.rotation = Quaternion.Euler(headsetRot.x, headsetRot.y, 0);
         hazard_Menu_UI.transform.position = player_Camera.position + player_Camera.TransformDirection(0, 0, 2);
@@ -83,9 +85,11 @@ public class Hazard_Detection : MonoBehaviour
        // toggle_Time();
     }
 
-    //collison bug (needs fixings)
+    //checks to see which safety item is getting picked up and acts accordingly
     public void equip()
     {
+        //collision timer fixes bugs of having constant visuals blocked by assets and 
+        //collision boxes
 		collision_Timer = 10f;
         //toggle_Time();
         hazard_Menu_UI.SetActive(false);
@@ -95,6 +99,8 @@ public class Hazard_Detection : MonoBehaviour
         {
             hazard.Completed = true;
         }
+
+        //attachs the helmet to player given it a more realistic feeling
         if(safety_item.name == "Hard_Hat")
         {
             safety_item.gameObject.tag = "Untagged";
@@ -130,7 +136,7 @@ public class Hazard_Detection : MonoBehaviour
         
     }
 
-
+    //game over when a player performs a task the is dangerous
     public void game_Over()
     {
         //open death panel
@@ -142,7 +148,7 @@ public class Hazard_Detection : MonoBehaviour
         toggle_Time();
     }
 
-
+    //not in use, doesn't work within VR mode
     private void toggle_Time()
     {
         pause_Game = !pause_Game;
@@ -157,9 +163,11 @@ public class Hazard_Detection : MonoBehaviour
         }
     }
 
+    //restarts player in same location to continue game
     public void Retry()
     {
-        
+        collision_Timer = 0;
+
         toggle_Time();
         safety_item.SetActive(true);
         death_Menu_UI.SetActive(false);
