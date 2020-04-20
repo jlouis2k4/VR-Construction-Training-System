@@ -5,6 +5,9 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEditor.SceneManagement;
 
+/// <summary>
+/// Class containing the main behavior of the Exit Menu Prefab.
+/// </summary>
 public class ExitMenu : MonoBehaviour
 {
 	public GameObject endLevelMenu;
@@ -12,28 +15,28 @@ public class ExitMenu : MonoBehaviour
 	public Text scoreText;
 	public ObjectiveManager objManager;
 
-
+	/// <summary>
+	/// Awake is called when the script instance is being loaded.
+	/// </summary>
 	private void Awake() {
 		endLevelMenu.SetActive(false);
 		scoreMenu.SetActive(false);
 	}
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            EnableConfirmationMenu();
-        }
-    }
-
+	/// <summary>
+    /// Enables the endLevelMenu attached to this GameObject and the menu pointer.
+    /// </summary>
     public void EnableConfirmationMenu() {
 		if (endLevelMenu.activeInHierarchy == false) {
 			endLevelMenu.SetActive(true);
-			//transform.LookAt(new Vector3(0,1,-3), Vector3.up);
 			Pointer.MenuIsActive(true);
 		}
 	}
 
+	/// <summary>
+    /// OnClick() function that disables the endLevelMenu GameObject, enables the scoreMenu GameObject,
+    /// and retrieves the player's score from the ObjectiveManager.
+    /// </summary>
 	public void YesEndLevel() {
 		endLevelMenu.SetActive(false);
 		scoreText.text = "Score: " + objManager.GetScore().ToString();
@@ -41,11 +44,17 @@ public class ExitMenu : MonoBehaviour
 		
 	}
 
+	/// <summary>
+	/// OnClick() function that disables the endLevelMenu attached to this GameObject and the menu pointer.
+	/// </summary>
 	public void NoEndLevel() {
 		endLevelMenu.SetActive(false);
 		Pointer.MenuIsActive(false);
 	}
 
+	/// <summary>
+    /// OnClick() function that loads the MainMenu scene.
+    /// </summary>
 	public void ExitLevel() {
 		GlobalData.LevelName = null;
 		GlobalData.PlayerCanMove = true;
@@ -58,4 +67,6 @@ public class ExitMenu : MonoBehaviour
 			SceneManager.LoadScene(0, LoadSceneMode.Single);
 		}
 	}
+
+	//TODO: Set up Collider that calls EnableConfirmationMenu when the player intersects it.
 }

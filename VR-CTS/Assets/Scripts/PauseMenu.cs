@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 using UnityEditor.SceneManagement;
 using Valve.VR;
 
+/// <summary>
+/// Class containing the main behavior of the PauseMenu prefab.
+/// </summary>
 public class PauseMenu : MonoBehaviour
 {
     public static bool LevelIsPaused = false;
@@ -14,21 +17,22 @@ public class PauseMenu : MonoBehaviour
     public SteamVR_Input_Sources m_TargetSource;
     public SteamVR_Action_Boolean m_PauseAction;
 
+    /// <summary>
+    /// Update is called once every frame.
+    /// </summary>
     void Update()
     {
-        if (m_PauseAction.GetStateDown(m_TargetSource))
-        {
-            if (LevelIsPaused == true) Resume();
-            else Pause();
-        }
-
-        if (Input.GetKeyDown(KeyCode.P))
+		// If the m_PauseAction action of the VR controller is pressed down, change the state of the Pause Menu.
+		if (m_PauseAction.GetStateDown(m_TargetSource))
         {
             if (LevelIsPaused == true) Resume();
             else Pause();
         }
     }
 
+	/// <summary>
+	/// Disable pause menu UI and unpause the level.
+	/// </summary>
 	public void Resume() {
 		PauseMenuUI.SetActive(false);
         Pointer.MenuIsActive(false);
@@ -36,6 +40,10 @@ public class PauseMenu : MonoBehaviour
 		LevelIsPaused = false;
 	}
 
+	/// <summary>
+    /// Enable pause menu UI and pause the level.
+    /// Sets the position of the pause menu to in front the user, facing them.
+    /// </summary>
 	public void Pause() {
         Vector3 headsetRot = HeadsetCamera.rotation.eulerAngles;
         transform.rotation = Quaternion.Euler(headsetRot.x, headsetRot.y, 0);
@@ -46,6 +54,9 @@ public class PauseMenu : MonoBehaviour
 		LevelIsPaused = true;
 	}
 
+	/// <summary>
+    /// Loads the MainMenu scene.
+    /// </summary>
 	public void QuitLevel() {
 		GlobalData.LevelName = null;
 		GlobalData.PlayerCanMove = true;

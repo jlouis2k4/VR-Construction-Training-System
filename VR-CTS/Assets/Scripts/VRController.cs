@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
 
+/// <summary>
+/// Class that controls the movement of the player character in VR based on the position
+/// of the VR headset and input from the VR Controllers.
+/// </summary>
 public class VRController : MonoBehaviour
 {
     public float m_Sensitivity = 0.1f;
@@ -21,6 +25,9 @@ public class VRController : MonoBehaviour
     private Transform m_CameraRig = null;
     private Transform m_Head = null;
 
+    /// <summary>
+	/// Awake is called when the script instance is being loaded.
+	/// </summary>
     private void Awake()
     {
         m_CharacterController = GetComponent<CharacterController>();
@@ -28,7 +35,9 @@ public class VRController : MonoBehaviour
     }
 
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// Start is called on the frame when a script is enabled, before the first Update().
+    /// </summary>
     void Start()
     {
         m_CameraRig = SteamVR_Render.Top().origin;
@@ -36,7 +45,9 @@ public class VRController : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Update is called once every frame.
+    /// </summary>
     void Update()
     {
 
@@ -46,7 +57,9 @@ public class VRController : MonoBehaviour
 
     }
 
-
+    /// <summary>
+    /// Sets the height of the character controller and collider based on the position of the user's head.
+    /// </summary>
     private void HandleHeight()
     {
         //Get the head in local space
@@ -68,6 +81,9 @@ public class VRController : MonoBehaviour
         m_CharacterController.center = newCenter;
     }
 
+    /// <summary>
+    /// Moves the player character based on the the rotation of the VR headset and any movement input from the VR Controllers.
+    /// </summary>
     private void CalculateMovement()
     {
         //Figure out movement orientation
@@ -94,7 +110,10 @@ public class VRController : MonoBehaviour
         m_CharacterController.Move(movement * Time.deltaTime);
     }
 
-
+    /// <summary>
+    /// Returns the rotation that the player character should have to match the VR headset.
+    /// </summary>
+    /// <returns>A quaternion containing the new rotation of the player character.</returns>
     private Quaternion CalculateOrientation()
     {
         float rotation = Mathf.Atan2(m_MoveValue.axis.x, m_MoveValue.axis.y);
@@ -106,6 +125,9 @@ public class VRController : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Lerp's player character rotation for smooth movement.
+    /// </summary>
     private void fluidMovement()
     {
         float snapValue = 0.0f;
@@ -117,11 +139,6 @@ public class VRController : MonoBehaviour
             snapValue = Mathf.Abs(m_RotateIncrement);
 
         transform.RotateAround(m_Head.position, Vector3.up, snapValue);
-    }
-
-    private void SnapRotation()
-    {
-
     }
 
 
