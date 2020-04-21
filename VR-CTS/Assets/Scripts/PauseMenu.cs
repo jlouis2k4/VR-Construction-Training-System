@@ -16,11 +16,17 @@ public class PauseMenu : MonoBehaviour
     public Transform HeadsetCamera;
     public SteamVR_Input_Sources m_TargetSource;
     public SteamVR_Action_Boolean m_PauseAction;
+	public GameTimer m_GameTimer;
 
-    /// <summary>
-    /// Update is called once every frame.
-    /// </summary>
-    void Update()
+	void Awake()
+	{
+			m_GameTimer.StartTimer();
+	}
+
+	/// <summary>
+	/// Update is called once every frame.
+	/// </summary>
+	void Update()
     {
 		// If the m_PauseAction action of the VR controller is pressed down, change the state of the Pause Menu.
 		if (m_PauseAction.GetStateDown(m_TargetSource))
