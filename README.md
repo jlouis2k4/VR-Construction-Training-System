@@ -16,7 +16,7 @@ The Virtual Reality Construction Training System is being developed using [Unity
 This program is being developed for the HTC Vive Pro Eye. Get your own for only $1599.00 USD at [https://enterprise.vive.com/us/product/vive-pro-eye/](https://enterprise.vive.com/us/product/vive-pro-eye/).
 
 # Setup
-1. Clone the repository into a location you can easily find later.
+1. Clone the repository into a location you can easily find later. The current code base is currently located in the devlop branch.
 2. Install [Unity Version 2019.2f](https://unity3d.com/get-unity/download/archive "Unity").
 3. Install [SteamVR](https://store.steampowered.com/app/250820/SteamVR/ "SteamVR").
 4. If you have a htc Vive Pro Eye headset, ensure that the headset is operational and connected to SteamVR.
