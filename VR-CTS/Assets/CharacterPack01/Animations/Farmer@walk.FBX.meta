@@ -1,0 +1,681 @@
+fileFormatVersion: 2
+guid: 512b43348dc006145bbc44d5fa952340
+ModelImporter:
+  serializedVersion: 25
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Farmer Bip01
+  - first:
+      1: 100002
+    second: Farmer BODY
+  - first:
+      1: 100004
+    second: Farmer EYE L
+  - first:
+      1: 100006
+    second: Farmer EYE R
+  - first:
+      1: 100008
+    second: Farmer Head
+  - first:
+      1: 100010
+    second: Farmer HeadNub
+  - first:
+      1: 100012
+    second: Farmer L Calf
+  - first:
+      1: 100014
+    second: Farmer L Clavicle
+  - first:
+      1: 100016
+    second: Farmer L Finger0
+  - first:
+      1: 100018
+    second: Farmer L Finger01
+  - first:
+      1: 100020
+    second: Farmer L Finger0Nub
+  - first:
+      1: 100022
+    second: Farmer L Finger1
+  - first:
+      1: 100024
+    second: Farmer L Finger11
+  - first:
+      1: 100026
+    second: Farmer L Finger1Nub
+  - first:
+      1: 100028
+    second: Farmer L Foot
+  - first:
+      1: 100030
+    second: Farmer L Forearm
+  - first:
+      1: 100032
+    second: Farmer L Hand
+  - first:
+      1: 100034
+    second: Farmer L Thigh
+  - first:
+      1: 100036
+    second: Farmer L Toe0
+  - first:
+      1: 100038
+    second: Farmer L Toe0Nub
+  - first:
+      1: 100040
+    second: Farmer L UpperArm
+  - first:
+      1: 100042
+    second: Farmer Neck
+  - first:
+      1: 100044
+    second: Farmer Pelvis
+  - first:
+      1: 100046
+    second: Farmer R Calf
+  - first:
+      1: 100048
+    second: Farmer R Clavicle
+  - first:
+      1: 100050
+    second: Farmer R Finger0
+  - first:
+      1: 100052
+    second: Farmer R Finger01
+  - first:
+      1: 100054
+    second: Farmer R Finger0Nub
+  - first:
+      1: 100056
+    second: Farmer R Finger1
+  - first:
+      1: 100058
+    second: Farmer R Finger11
+  - first:
+      1: 100060
+    second: Farmer R Finger1Nub
+  - first:
+      1: 100062
+    second: Farmer R Foot
+  - first:
+      1: 100064
+    second: Farmer R Forearm
+  - first:
+      1: 100066
+    second: Farmer R Hand
+  - first:
+      1: 100068
+    second: Farmer R Thigh
+  - first:
+      1: 100070
+    second: Farmer R Toe0
+  - first:
+      1: 100072
+    second: Farmer R Toe0Nub
+  - first:
+      1: 100074
+    second: Farmer R UpperArm
+  - first:
+      1: 100076
+    second: Farmer Spine
+  - first:
+      1: 100078
+    second: Farmer Spine1
+  - first:
+      1: 100080
+    second: Farmer Spine2
+  - first:
+      1: 100082
+    second: Farmer talk chin
+  - first:
+      1: 100084
+    second: Farmer talk lower lip01
+  - first:
+      1: 100086
+    second: Farmer talk lower lip02
+  - first:
+      1: 100088
+    second: Farmer talk mouth l01
+  - first:
+      1: 100090
+    second: Farmer talk mouth l02
+  - first:
+      1: 100092
+    second: Farmer talk mouth r01
+  - first:
+      1: 100094
+    second: Farmer talk mouth r02
+  - first:
+      1: 100096
+    second: Farmer talk upper lip01
+  - first:
+      1: 100098
+    second: Farmer talk upper lip02
+  - first:
+      1: 100100
+    second: Farmer X_l01
+  - first:
+      1: 100102
+    second: Farmer X_l02
+  - first:
+      1: 100104
+    second: Farmer X_r01
+  - first:
+      1: 100106
+    second: Farmer X_r02
+  - first:
+      1: 100108
+    second: Farmer Z_l01
+  - first:
+      1: 100110
+    second: Farmer Z_l02
+  - first:
+      1: 100112
+    second: Farmer Z_r01
+  - first:
+      1: 100114
+    second: Farmer Z_r02
+  - first:
+      1: 100116
+    second: //RootNode
+  - first:
+      4: 400000
+    second: Farmer Bip01
+  - first:
+      4: 400002
+    second: Farmer BODY
+  - first:
+      4: 400004
+    second: Farmer EYE L
+  - first:
+      4: 400006
+    second: Farmer EYE R
+  - first:
+      4: 400008
+    second: Farmer Head
+  - first:
+      4: 400010
+    second: Farmer HeadNub
+  - first:
+      4: 400012
+    second: Farmer L Calf
+  - first:
+      4: 400014
+    second: Farmer L Clavicle
+  - first:
+      4: 400016
+    second: Farmer L Finger0
+  - first:
+      4: 400018
+    second: Farmer L Finger01
+  - first:
+      4: 400020
+    second: Farmer L Finger0Nub
+  - first:
+      4: 400022
+    second: Farmer L Finger1
+  - first:
+      4: 400024
+    second: Farmer L Finger11
+  - first:
+      4: 400026
+    second: Farmer L Finger1Nub
+  - first:
+      4: 400028
+    second: Farmer L Foot
+  - first:
+      4: 400030
+    second: Farmer L Forearm
+  - first:
+      4: 400032
+    second: Farmer L Hand
+  - first:
+      4: 400034
+    second: Farmer L Thigh
+  - first:
+      4: 400036
+    second: Farmer L Toe0
+  - first:
+      4: 400038
+    second: Farmer L Toe0Nub
+  - first:
+      4: 400040
+    second: Farmer L UpperArm
+  - first:
+      4: 400042
+    second: Farmer Neck
+  - first:
+      4: 400044
+    second: Farmer Pelvis
+  - first:
+      4: 400046
+    second: Farmer R Calf
+  - first:
+      4: 400048
+    second: Farmer R Clavicle
+  - first:
+      4: 400050
+    second: Farmer R Finger0
+  - first:
+      4: 400052
+    second: Farmer R Finger01
+  - first:
+      4: 400054
+    second: Farmer R Finger0Nub
+  - first:
+      4: 400056
+    second: Farmer R Finger1
+  - first:
+      4: 400058
+    second: Farmer R Finger11
+  - first:
+      4: 400060
+    second: Farmer R Finger1Nub
+  - first:
+      4: 400062
+    second: Farmer R Foot
+  - first:
+      4: 400064
+    second: Farmer R Forearm
+  - first:
+      4: 400066
+    second: Farmer R Hand
+  - first:
+      4: 400068
+    second: Farmer R Thigh
+  - first:
+      4: 400070
+    second: Farmer R Toe0
+  - first:
+      4: 400072
+    second: Farmer R Toe0Nub
+  - first:
+      4: 400074
+    second: Farmer R UpperArm
+  - first:
+      4: 400076
+    second: Farmer Spine
+  - first:
+      4: 400078
+    second: Farmer Spine1
+  - first:
+      4: 400080
+    second: Farmer Spine2
+  - first:
+      4: 400082
+    second: Farmer talk chin
+  - first:
+      4: 400084
+    second: Farmer talk lower lip01
+  - first:
+      4: 400086
+    second: Farmer talk lower lip02
+  - first:
+      4: 400088
+    second: Farmer talk mouth l01
+  - first:
+      4: 400090
+    second: Farmer talk mouth l02
+  - first:
+      4: 400092
+    second: Farmer talk mouth r01
+  - first:
+      4: 400094
+    second: Farmer talk mouth r02
+  - first:
+      4: 400096
+    second: Farmer talk upper lip01
+  - first:
+      4: 400098
+    second: Farmer talk upper lip02
+  - first:
+      4: 400100
+    second: Farmer X_l01
+  - first:
+      4: 400102
+    second: Farmer X_l02
+  - first:
+      4: 400104
+    second: Farmer X_r01
+  - first:
+      4: 400106
+    second: Farmer X_r02
+  - first:
+      4: 400108
+    second: Farmer Z_l01
+  - first:
+      4: 400110
+    second: Farmer Z_l02
+  - first:
+      4: 400112
+    second: Farmer Z_r01
+  - first:
+      4: 400114
+    second: Farmer Z_r02
+  - first:
+      4: 400116
+    second: //RootNode
+  - first:
+      23: 2300000
+    second: Farmer EYE L
+  - first:
+      23: 2300002
+    second: Farmer EYE R
+  - first:
+      33: 3300000
+    second: Farmer EYE L
+  - first:
+      33: 3300002
+    second: Farmer EYE R
+  - first:
+      43: 4300000
+    second: Farmer BODY
+  - first:
+      43: 4300002
+    second: Farmer EYE R
+  - first:
+      43: 4300004
+    second: Farmer EYE L
+  - first:
+      74: 7400000
+    second: walk
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      111: 11100000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Farmer BODY
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: walk
+      takeName: Farmer@walk
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 51
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Farmer Bip01
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer L Thigh
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer L Thigh/Farmer L Calf
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer L Thigh/Farmer L Calf/Farmer
+          L Foot
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer L Thigh/Farmer L Calf/Farmer
+          L Foot/Farmer L Toe0
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer L Thigh/Farmer L Calf/Farmer
+          L Foot/Farmer L Toe0/Farmer L Toe0Nub
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer R Thigh
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer R Thigh/Farmer R Calf
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer R Thigh/Farmer R Calf/Farmer
+          R Foot
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer R Thigh/Farmer R Calf/Farmer
+          R Foot/Farmer R Toe0
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer R Thigh/Farmer R Calf/Farmer
+          R Foot/Farmer R Toe0/Farmer R Toe0Nub
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer Head
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer Head/Farmer HeadNub
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer Head/Farmer talk chin
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer Head/Farmer talk chin/Farmer talk lower lip01
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer Head/Farmer talk chin/Farmer talk lower lip01/Farmer talk lower
+          lip02
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer Head/Farmer talk mouth l01
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer Head/Farmer talk mouth l01/Farmer talk mouth l02
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer Head/Farmer talk mouth r01
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer Head/Farmer talk mouth r01/Farmer talk mouth r02
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer Head/Farmer talk upper lip01
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer Head/Farmer talk upper lip01/Farmer talk upper lip02
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer Head/Farmer X_l01
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer Head/Farmer X_l01/Farmer X_l02
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer Head/Farmer X_r01
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer Head/Farmer X_r01/Farmer X_r02
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer Head/Farmer Z_l01
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer Head/Farmer Z_l01/Farmer Z_l02
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer Head/Farmer Z_r01
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer Head/Farmer Z_r01/Farmer Z_r02
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer L Clavicle
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer L Clavicle/Farmer L UpperArm
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer L Clavicle/Farmer L UpperArm/Farmer L Forearm
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer L Clavicle/Farmer L UpperArm/Farmer L Forearm/Farmer L Hand
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer L Clavicle/Farmer L UpperArm/Farmer L Forearm/Farmer L Hand/Farmer
+          L Finger0
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer L Clavicle/Farmer L UpperArm/Farmer L Forearm/Farmer L Hand/Farmer
+          L Finger0/Farmer L Finger01
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer L Clavicle/Farmer L UpperArm/Farmer L Forearm/Farmer L Hand/Farmer
+          L Finger0/Farmer L Finger01/Farmer L Finger0Nub
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer L Clavicle/Farmer L UpperArm/Farmer L Forearm/Farmer L Hand/Farmer
+          L Finger1
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer L Clavicle/Farmer L UpperArm/Farmer L Forearm/Farmer L Hand/Farmer
+          L Finger1/Farmer L Finger11
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer L Clavicle/Farmer L UpperArm/Farmer L Forearm/Farmer L Hand/Farmer
+          L Finger1/Farmer L Finger11/Farmer L Finger1Nub
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer R Clavicle
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer R Clavicle/Farmer R UpperArm
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer R Clavicle/Farmer R UpperArm/Farmer R Forearm
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer R Clavicle/Farmer R UpperArm/Farmer R Forearm/Farmer R Hand
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer R Clavicle/Farmer R UpperArm/Farmer R Forearm/Farmer R Hand/Farmer
+          R Finger0
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer R Clavicle/Farmer R UpperArm/Farmer R Forearm/Farmer R Hand/Farmer
+          R Finger0/Farmer R Finger01
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer R Clavicle/Farmer R UpperArm/Farmer R Forearm/Farmer R Hand/Farmer
+          R Finger0/Farmer R Finger01/Farmer R Finger0Nub
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer R Clavicle/Farmer R UpperArm/Farmer R Forearm/Farmer R Hand/Farmer
+          R Finger1
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer R Clavicle/Farmer R UpperArm/Farmer R Forearm/Farmer R Hand/Farmer
+          R Finger1/Farmer R Finger11
+        weight: 1
+      - path: Farmer Bip01/Farmer Pelvis/Farmer Spine/Farmer Spine1/Farmer Spine2/Farmer
+          Neck/Farmer R Clavicle/Farmer R UpperArm/Farmer R Forearm/Farmer R Hand/Farmer
+          R Finger1/Farmer R Finger11/Farmer R Finger1Nub
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.01
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

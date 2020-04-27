@@ -323,6 +323,10 @@ PlayerSettings:
   - m_BuildTarget: Lumin
     m_Enabled: 0
     m_Devices: []
+  - m_BuildTarget: Windows Store Apps
+    m_Enabled: 1
+    m_Devices:
+    - OpenVR
   m_BuildTargetEnableVuforiaSettings: []
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
