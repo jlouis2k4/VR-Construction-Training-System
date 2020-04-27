@@ -198,11 +198,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause_Menu
       objectReference: {fileID: 0}
-    - target: {fileID: 6344087735511884718, guid: 4e68ddb507f12f64f80fc655f22116ee,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6344087735511884714, guid: 4e68ddb507f12f64f80fc655f22116ee,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -312,15 +307,6 @@ PrefabInstance:
       propertyPath: HeadsetCamera
       value: 
       objectReference: {fileID: 1933984884}
-    - target: {fileID: 4102388602884931253, guid: 4e68ddb507f12f64f80fc655f22116ee,
-        type: 3}
-      propertyPath: textOffset
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 819255188, guid: 4e68ddb507f12f64f80fc655f22116ee, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6344087735511884715, guid: 4e68ddb507f12f64f80fc655f22116ee,
         type: 3}
       propertyPath: m_Camera

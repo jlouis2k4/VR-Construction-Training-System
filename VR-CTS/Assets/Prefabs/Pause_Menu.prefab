@@ -96,7 +96,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &819255189
 RectTransform:
   m_ObjectHideFlags: 0
@@ -328,7 +328,8 @@ MonoBehaviour:
   anchor: {fileID: 1535529655616493401}
   hazardText: {fileID: 8867291773180806660, guid: 538d9c9d668b1b241b6645947ba2a47f,
     type: 3}
-  textOffset: 20
+  textOffset: 0.1
+  hazardTotals: 
 --- !u!1 &6344087734222447972
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,6 +884,7 @@ MonoBehaviour:
   m_PauseAction:
     actionPath: /actions/default/in/Pause
     needsReinit: 0
+  m_GameTimer: {fileID: 6344087735276047428}
 --- !u!1 &6919052610048667564
 GameObject:
   m_ObjectHideFlags: 0

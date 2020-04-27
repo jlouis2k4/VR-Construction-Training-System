@@ -18,7 +18,7 @@ public class GameTimer : MonoBehaviour
 	/// <summary>
 	/// Awake is called when the script instance is being loaded.
 	/// </summary>
-	private void Awake()
+	public void StartTimer()
     {
         textClock = GetComponent<Text>();
 		timer = new Stopwatch();
