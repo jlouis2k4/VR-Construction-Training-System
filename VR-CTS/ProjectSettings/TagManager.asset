@@ -9,6 +9,8 @@ TagManager:
   - FxTemporaire
   - projectile
   - barricade
+  - grab
+  - boss
   layers:
   - Default
   - TransparentFX

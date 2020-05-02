@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.vrcts.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\DAQuser\\Desktop\\VR-CTS\\VR-Construction-Training-System\\VR-CTS\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "C:\\Users\\DAQuser\\Desktop\\VR-Construction-Training-System\\VR-CTS\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
           "name": "VR-CTS [Testing]"

@@ -15,6 +15,7 @@ public class VRToggle : MonoBehaviour
 	/// </summary>
     public void Awake()
     {
+        Debug.Log("VR Enabled: " + XRSettings.isDeviceActive);
         if (VREnabled)
         {
             EnableVR();

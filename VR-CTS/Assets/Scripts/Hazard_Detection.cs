@@ -45,8 +45,11 @@ public class Hazard_Detection : MonoBehaviour
     {
         if (collision_Timer >= 10)
         {
-            safety_item = other.gameObject;
-            safety_item.SetActive(false);
+            if (other.gameObject.tag != "boss")
+            {
+                safety_item = other.gameObject;
+                safety_item.SetActive(false);
+            }
 
             collision_Timer = 0;
             //calls function death if player collides with death object

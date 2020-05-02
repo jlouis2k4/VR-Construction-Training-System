@@ -6,6 +6,7 @@ public class start_Finish_Missions : MonoBehaviour
 {
     public AudioClip Bosses_Voice;
     public AudioClip Bosses_Voice_Finish;
+    public ExitMenu Exit_Menu;
 
     private int count = 0;
 
@@ -26,12 +27,13 @@ public class start_Finish_Missions : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             AudioSource audio = GetComponent<AudioSource>();
-
             count++;
             if (count > 1)
             {
                 audio.clip = Bosses_Voice_Finish;
                 audio.Play();
+                Exit_Menu.EnableConfirmationMenu();
+
             }
             else
             {
