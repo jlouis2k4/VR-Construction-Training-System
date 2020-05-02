@@ -220,7 +220,17 @@ public class SavableList : MonoBehaviour
 					Debug.Log(obj.ToString());
 					SpawnMyObject(obj);
 				}
-			}
+
+                // If in play mode, get all the hazards.
+                if (isPlayMode)
+                {
+                    myHazardList = new List<Hazard>(GameObject.FindObjectsOfType<Hazard>());
+                    foreach(Hazard h in myHazardList)
+                    {
+                        print("Found Hazard: " + h.gameObject.name);
+                    }
+                }
+            }
 			return true;
 		}
 		catch (Exception ex)

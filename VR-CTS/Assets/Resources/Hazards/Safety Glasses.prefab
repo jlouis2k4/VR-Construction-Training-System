@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3574896913747252033}
   - component: {fileID: 3115486526571861204}
+  - component: {fileID: 7120435189393941764}
   m_Layer: 0
   m_Name: Safety Glasses
   m_TagString: low
@@ -45,6 +46,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 3.89, z: 16.87}
   m_Center: {x: 0, y: 0, z: -4.03}
+--- !u!114 &7120435189393941764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3115486526571861205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e682ef1aac7beb54bb7c1c0828a14df2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HazardEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: HazardCompletedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  type: 4
 --- !u!1 &4534893099965474761
 GameObject:
   m_ObjectHideFlags: 0
