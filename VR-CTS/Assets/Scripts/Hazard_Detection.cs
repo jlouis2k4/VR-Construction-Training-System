@@ -90,7 +90,7 @@ public class Hazard_Detection : MonoBehaviour
         //collision timer fixes bugs of having constant visuals blocked by assets and 
         //collision boxes
 		collision_Timer = 10f;
-        //toggle_Time();
+
         hazard_Menu_UI.SetActive(false);
         Pointer.MenuIsActive(false);
         Hazard hazard = safety_item.GetComponent<Hazard>();
@@ -130,11 +130,11 @@ public class Hazard_Detection : MonoBehaviour
     public void dont_Equip()
     {
         safety_item.SetActive(true);
-        //toggle_Time();
         hazard_Menu_UI.SetActive(false);
         
     }
 
+    /*****NOT IMPLEMENTED*********/
     //game over when a player performs a task the is dangerous
     public void game_Over()
     {

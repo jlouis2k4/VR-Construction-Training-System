@@ -119,16 +119,7 @@ public class SavableList : MonoBehaviour
 		}
         Debug.Log("Load From Lib: " + data.Lib);
 		savable.lib = data.Lib;
-        savable.objName = data.Name;
-
-		// If in play mode, check if the gameobject is a hazard and add it to the list of hazards if it is.
-		if (isPlayMode) {
-			Hazard hazard = obj.GetComponent<Hazard>();
-			if (hazard != null) {
-				myHazardList.Add(hazard);
-			}
-		}
-       
+        savable.objName = data.Name;       
 		return obj;
 	}
 
