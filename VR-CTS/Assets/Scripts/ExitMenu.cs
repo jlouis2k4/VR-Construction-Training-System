@@ -16,6 +16,7 @@ public class ExitMenu : MonoBehaviour
 	public GameObject scoreMenu;
 	public Text scoreText;
 	public ObjectiveManager objManager;
+    private Canvas canvas;
 
 	/// <summary>
 	/// Awake is called when the script instance is being loaded.
@@ -23,7 +24,9 @@ public class ExitMenu : MonoBehaviour
 	private void Awake() {
 		endLevelMenu.SetActive(false);
 		scoreMenu.SetActive(false);
-	}
+        canvas = GetComponent<Canvas>();
+        canvas.worldCamera = GameObject.Find("Pointer").GetComponent<Camera>();
+    }
 
 	/// <summary>
     /// Enables the endLevelMenu attached to this GameObject and the menu pointer.
