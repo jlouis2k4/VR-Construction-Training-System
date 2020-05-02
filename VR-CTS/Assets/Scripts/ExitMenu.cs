@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+#if UNITY_EDITOR
 using UnityEditor.SceneManagement;
+#endif
 
 /// <summary>
 /// Class containing the main behavior of the Exit Menu Prefab.
@@ -58,15 +60,13 @@ public class ExitMenu : MonoBehaviour
 	public void ExitLevel() {
 		GlobalData.LevelName = null;
 		GlobalData.PlayerCanMove = true;
-		if (Application.isEditor)
-		{
-			EditorSceneManager.LoadScene(0, LoadSceneMode.Single);
-		}
-		else
-		{
-			SceneManager.LoadScene(0, LoadSceneMode.Single);
-		}
-	}
+#if UNITY_EDITOR
 
-	//TODO: Set up Collider that calls EnableConfirmationMenu when the player intersects it.
+        EditorSceneManager.LoadScene(0, LoadSceneMode.Single);
+#else
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
+#endif
+    }
+
+    //TODO: Set up Collider that calls EnableConfirmationMenu when the player intersects it.
 }

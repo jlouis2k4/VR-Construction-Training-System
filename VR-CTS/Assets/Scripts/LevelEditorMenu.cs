@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+#if UNITY_EDITOR
 using UnityEditor.SceneManagement;
+#endif
 
 /// <summary>
 /// Class containing the main behavior of the EditorMenu prefab.
@@ -61,20 +63,18 @@ public class LevelEditorMenu : MonoBehaviour
     /// OnClick() function. Returns to the MainMenu Scene.
     /// </summary>
 	public void onExitButtonClicked() {
-		if (Application.isEditor)
-		{
-			EditorSceneManager.LoadScene(MENU_SCENE, LoadSceneMode.Single);
-		}
-		else
-		{
-			SceneManager.LoadScene(MENU_SCENE, LoadSceneMode.Single);
-		}
-	}
+#if UNITY_EDITOR
 
-	/// <summary>
+        EditorSceneManager.LoadScene(MENU_SCENE, LoadSceneMode.Single);
+#else
+        SceneManager.LoadScene(MENU_SCENE, LoadSceneMode.Single);
+#endif
+    }
+
+    /// <summary>
     /// OnClick() function. Saves current level over existing one with the same name.
     /// </summary>
-	public void onYesButtonClicked() {
+    public void onYesButtonClicked() {
 		Debug.Log("Overwriting level: " + nameInputField.text);
 		levelManagerList.SaveCurrentLevel(nameInputField.text);
 		overwriteMenu.SetActive(false);

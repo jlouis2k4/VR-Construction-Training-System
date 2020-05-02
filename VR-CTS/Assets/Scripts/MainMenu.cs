@@ -4,7 +4,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+#if UNITY_EDITOR
 using UnityEditor.SceneManagement;
+#endif
 
 /// <summary>
 /// Contains the main behavior of the MainMenu prefab.
@@ -39,14 +41,12 @@ public class MainMenu : MonoBehaviour
     {
         if (GlobalData.LevelName != null)
         {
-            if (Application.isEditor)
-            {
-                EditorSceneManager.LoadScene(PLAY_SCENE, LoadSceneMode.Single);
-            }
-            else
-            {
-                SceneManager.LoadScene(PLAY_SCENE, LoadSceneMode.Single);
-            }
+#if UNITY_EDITOR
+
+            EditorSceneManager.LoadScene(PLAY_SCENE, LoadSceneMode.Single);
+#else
+            SceneManager.LoadScene(PLAY_SCENE, LoadSceneMode.Single);
+#endif
         }
     }
 
@@ -58,14 +58,12 @@ public class MainMenu : MonoBehaviour
     {
         if (GlobalData.LevelName != null)
         {
-			if (Application.isEditor)
-            {
-                EditorSceneManager.LoadScene(EDITOR_SCENE, LoadSceneMode.Single);
-            }
-            else
-            {
-                SceneManager.LoadScene(EDITOR_SCENE, LoadSceneMode.Single);
-            }
+#if UNITY_EDITOR
+
+            EditorSceneManager.LoadScene(EDITOR_SCENE, LoadSceneMode.Single);
+#else
+            SceneManager.LoadScene(EDITOR_SCENE, LoadSceneMode.Single);
+#endif
         }
     }
 
@@ -76,14 +74,13 @@ public class MainMenu : MonoBehaviour
     {
         GlobalData.LevelName = null;
         if (Application.isEditor)
-        {
+#if UNITY_EDITOR
+
             EditorSceneManager.LoadScene(EDITOR_SCENE, LoadSceneMode.Single);
-        }
-        else
-        {
+#else
             SceneManager.LoadScene(EDITOR_SCENE, LoadSceneMode.Single);
-        }
-        
+#endif
+
     }
 
     /// <summary>
@@ -94,7 +91,7 @@ public class MainMenu : MonoBehaviour
     {
         if (GlobalData.LevelName != null) {
 			try {
-				File.Delete(Application.dataPath + "/Saves/" + GlobalData.LevelName + ".bin");
+				File.Delete(Application.streamingAssetsPath + "/Saves/" + GlobalData.LevelName + ".bin");
 				levelList.refreshFiles();
 			}
 			catch (Exception ex)

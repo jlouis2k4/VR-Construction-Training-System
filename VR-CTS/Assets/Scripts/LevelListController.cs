@@ -42,10 +42,10 @@ public class LevelListController : MonoBehaviour
     /// Retrieves non-metadata files from folder FileDirectory and adds a text entry for each to the level list.
     /// </summary>
 	public void InitFiles() {
-		int dirLength = Application.dataPath.Length + FileDirectory.Length + 2;
+		int dirLength = Application.streamingAssetsPath.Length + FileDirectory.Length + 2;
 		string curString;
 		textItems = new List<GameObject>();
-		var files = Directory.GetFiles(Application.dataPath + '/' + FileDirectory);
+		var files = Directory.GetFiles(Application.streamingAssetsPath + '/' + FileDirectory);
 		foreach (string file in files)
 		{
 			if (!file.Contains(".bin") || file.Contains(".meta")) continue;
@@ -59,14 +59,14 @@ public class LevelListController : MonoBehaviour
     /// </summary>
     public void refreshFiles()
     {
-        int dirLength = Application.dataPath.Length + FileDirectory.Length + 2;
+        int dirLength = Application.streamingAssetsPath.Length + FileDirectory.Length + 2;
         string curString;
         foreach(GameObject gm in textItems)
         {
             GameObject.Destroy(gm);
         }
         textItems = new List<GameObject>();
-        var files = Directory.GetFiles(Application.dataPath + '/' + FileDirectory);
+        var files = Directory.GetFiles(Application.streamingAssetsPath + '/' + FileDirectory);
         foreach (string file in files)
         {
             if (file.Contains("meta")) continue;

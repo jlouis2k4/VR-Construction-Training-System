@@ -171,7 +171,7 @@ public class SavableList : MonoBehaviour
 		try
 		{
 			// Write SavableData objects as binary data to file
-			using (Stream stream = File.Open(Application.dataPath + "/Saves/" + newName + ".bin", FileMode.CreateNew))
+			using (Stream stream = File.Open(Application.streamingAssetsPath + "/Saves/" + newName + ".bin", FileMode.CreateNew))
 			{
 				var binForm = new BinaryFormatter();
 				CompileSaveData();
@@ -195,7 +195,7 @@ public class SavableList : MonoBehaviour
 		try
 		{
 			// Write SavableData objects as binary data to file.
-			using (Stream stream = File.Open(Application.dataPath + "/Saves/" + curName + ".bin", FileMode.Create))
+			using (Stream stream = File.Open(Application.streamingAssetsPath + "/Saves/" + curName + ".bin", FileMode.Create))
 			{
 				var binForm = new BinaryFormatter();
 				CompileSaveData();
@@ -219,7 +219,7 @@ public class SavableList : MonoBehaviour
 		try
 		{
 			// Read SavableData objects from binary file if it exists.
-			using (Stream stream = File.Open(Application.dataPath + "/Saves/" + levelName + ".bin", FileMode.Open))
+			using (Stream stream = File.Open(Application.streamingAssetsPath + "/Saves/" + levelName + ".bin", FileMode.Open))
 			{
 				var binForm = new BinaryFormatter();
 

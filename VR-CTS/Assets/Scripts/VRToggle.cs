@@ -13,9 +13,9 @@ public class VRToggle : MonoBehaviour
     /// <summary>
 	/// Awake is called when the script instance is being loaded.
 	/// </summary>
-    public void Awake()
+    public void Start()
     {
-        Debug.Log("VR Enabled: " + XRSettings.isDeviceActive);
+        
         if (VREnabled)
         {
             EnableVR();
@@ -23,6 +23,7 @@ public class VRToggle : MonoBehaviour
         {
             DisableVR();
         }
+        Debug.Log("VR Enabled: " + XRSettings.isDeviceActive);
     }
 
     /// <summary>

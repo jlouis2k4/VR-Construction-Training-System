@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+#if UNITY_EDITOR
 using UnityEditor.SceneManagement;
+#endif
 using Valve.VR;
 
 /// <summary>
@@ -66,13 +68,11 @@ public class PauseMenu : MonoBehaviour
 	public void QuitLevel() {
 		GlobalData.LevelName = null;
 		GlobalData.PlayerCanMove = true;
-		if (Application.isEditor)
-		{
-			EditorSceneManager.LoadScene(0, LoadSceneMode.Single);
-		}
-		else
-		{
-			SceneManager.LoadScene(0, LoadSceneMode.Single);
-		}
+#if UNITY_EDITOR
+
+        EditorSceneManager.LoadScene(0, LoadSceneMode.Single);
+#else
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
+#endif
 	}
 }
