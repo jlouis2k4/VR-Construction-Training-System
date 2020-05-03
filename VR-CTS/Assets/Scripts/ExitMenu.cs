@@ -25,14 +25,15 @@ public class ExitMenu : MonoBehaviour
 		endLevelMenu.SetActive(false);
 		scoreMenu.SetActive(false);
         canvas = GetComponent<Canvas>();
-        canvas.worldCamera = GameObject.Find("Pointer").GetComponent<Camera>();
     }
 
 	/// <summary>
     /// Enables the endLevelMenu attached to this GameObject and the menu pointer.
     /// </summary>
     public void EnableConfirmationMenu() {
-		if (endLevelMenu.activeInHierarchy == false) {
+        canvas.worldCamera = GameObject.Find("Pointer").GetComponent<Camera>();
+        objManager = GameObject.Find("LevelManager").GetComponent<ObjectiveManager>();
+        if (endLevelMenu.activeInHierarchy == false) {
 			endLevelMenu.SetActive(true);
 			Pointer.MenuIsActive(true);
 		}

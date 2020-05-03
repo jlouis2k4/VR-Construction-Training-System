@@ -30,11 +30,14 @@ public class PauseMenu : MonoBehaviour
 	/// </summary>
 	void Update()
     {
-		// If the m_PauseAction action of the VR controller is pressed down, change the state of the Pause Menu.
-		if (m_PauseAction.GetStateDown(m_TargetSource))
+        if (m_PauseAction != null)
         {
-            if (LevelIsPaused == true) Resume();
-            else Pause();
+            // If the m_PauseAction action of the VR controller is pressed down, change the state of the Pause Menu.
+            if (m_PauseAction.GetStateDown(m_TargetSource))
+            {
+                if (LevelIsPaused == true) Resume();
+                else Pause();
+            }
         }
     }
 

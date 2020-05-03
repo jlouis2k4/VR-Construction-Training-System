@@ -20,6 +20,7 @@ public class MainMenu : MonoBehaviour
     public GameObject mainMenu;
     public GameObject levelMenu;
 	public LevelListController levelList;
+    public VR_Toggle toggle;
 
     private bool mainMenuEnabled = true;
     private bool levelMenuEnabled = false;
@@ -41,6 +42,7 @@ public class MainMenu : MonoBehaviour
     {
         if (GlobalData.LevelName != null)
         {
+            
 #if UNITY_EDITOR
 
             EditorSceneManager.LoadScene(PLAY_SCENE, LoadSceneMode.Single);
