@@ -6,8 +6,6 @@ using UnityEngine.XR;
 public class VR_Toggle : MonoBehaviour { 
 
     public bool VREnabled;
-    public GameObject VRController;
-    public GameObject pauseMenu;
     // Start is called before the first frame update
     void Awake()
     {
@@ -33,13 +31,8 @@ public class VR_Toggle : MonoBehaviour {
     IEnumerator LoadDevice(string device, bool enabled)
     {
         XRSettings.LoadDeviceByName(device);
-        yield return new WaitForSeconds(0.5f);
+        yield return null;
         XRSettings.enabled = enabled;
-        if (VRController)
-        {
-            VRController.SetActive(enabled);
-            pauseMenu.SetActive(true);
-        }
     }
    
 
