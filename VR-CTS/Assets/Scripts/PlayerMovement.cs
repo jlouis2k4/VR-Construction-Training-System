@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//script of player for testing assets and objects
+/// <summary>
+/// Script that allows moving the player without VR for testing ourposes
+/// </summary>
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
@@ -11,10 +13,12 @@ public class PlayerMovement : MonoBehaviour
     public float gravity = -9.81f;
     public float groundDistance = 0.4f;
    
-
     Vector3 velocity;
     bool isGrounded;
-    // Update is called once per frame
+
+    /// <summary>
+	/// Update is called once every frame.
+	/// </summary>
     void Update()
     {
 		if (GlobalData.PlayerCanMove) {

@@ -5,7 +5,6 @@ using UnityEngine.UI;
 using System.Diagnostics;
 using System;
 
-
 /// <summary>
 /// Class that starts a Stopwatch when instantiated. Time is displayed in HH:MM:SS format.
 /// </summary>

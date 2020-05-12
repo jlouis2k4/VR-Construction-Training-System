@@ -2,44 +2,46 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//script for elevator hazard interatction
+/// <summary>
+/// Script for elevator hazard interaction
+/// </summary>
 public class elevator_Hazard : MonoBehaviour
 {
     private Hazard hazard;
-    
-    // Start is called before the first frame update
+
+    /// <summary>
+    /// Awake is called when the script instance is being loaded.
+    /// </summary>
     void Awake()
     {
         hazard = GetComponent<Hazard>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    //when an object with tag barricade collides with this object
-    //sets off a true command telling the game hazard has been completed
+    /// <summary>
+    /// Collider function: When an object with the tag 'barricade' collides with this object sets off a true command telling the game hazard has been completed
+    /// </summary>
+    /// <param name="other">The Collider of the other GameObject being collided with</param>
     public void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "barricade")
         {
-            print(other.gameObject.name);
-            hazard.Completed = true; //communicates and updates score.
+            //communicates that hazard is completed and updates score.
+            hazard.Completed = true;
 
         }
       
     }
 
-    //turns hazard completion to false, if barricade is removed
+    /// <summary>
+    /// Turns hazard completion to false, if barricade is removed
+    /// </summary>
+    /// <param name="other">The Collider of the other GameObject being collided with</param>
     public void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "barricade")
         {
             print(other.gameObject.name);
             hazard.Completed = false;
-            
         }
     }
 }

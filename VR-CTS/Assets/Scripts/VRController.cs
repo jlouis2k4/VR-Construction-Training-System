@@ -7,7 +7,7 @@ using Valve.VR;
 /// Class that controls the movement of the player character in VR based on the position
 /// of the VR headset and input from the VR Controllers.
 /// </summary>
-public class VRController : MonoBehaviour
+public class VRController : MonoBehaviour 
 {
     public float m_Sensitivity = 0.1f;
     public float m_MaxSpeed = 1.0f;
@@ -28,39 +28,35 @@ public class VRController : MonoBehaviour
     /// <summary>
 	/// Awake is called when the script instance is being loaded.
 	/// </summary>
-    private void Awake()
+    private void Awake() 
     {
         m_CharacterController = GetComponent<CharacterController>();
 
     }
 
-
     /// <summary>
     /// Start is called on the frame when a script is enabled, before the first Update().
     /// </summary>
-    void Start()
+    void Start() 
     {
         m_CameraRig = SteamVR_Render.Top().origin;
         m_Head = SteamVR_Render.Top().head;
-
     }
 
     /// <summary>
     /// Update is called once every frame.
     /// </summary>
-    void Update()
+    void Update() 
     {
-
         HandleHeight();
         CalculateMovement();
         fluidMovement();
-
     }
 
     /// <summary>
     /// Sets the height of the character controller and collider based on the position of the user's head.
     /// </summary>
-    private void HandleHeight()
+    private void HandleHeight() 
     {
         //Get the head in local space
         float headHeight = Mathf.Clamp(m_Head.localPosition.y, 1, 2);
@@ -84,7 +80,7 @@ public class VRController : MonoBehaviour
     /// <summary>
     /// Moves the player character based on the the rotation of the VR headset and any movement input from the VR Controllers.
     /// </summary>
-    private void CalculateMovement()
+    private void CalculateMovement() 
     {
         //Figure out movement orientation
 
@@ -92,11 +88,10 @@ public class VRController : MonoBehaviour
         Vector3 movement = Vector3.zero;
 
         //If not moving
-        if (m_MoveValue.axis.magnitude == 0)
+        if (m_MoveValue.axis.magnitude == 0) 
         {
             m_Speed = 0;
         }
-
 
         // Add, clamp
         m_Speed += m_MoveValue.axis.magnitude * m_Sensitivity;
@@ -114,7 +109,7 @@ public class VRController : MonoBehaviour
     /// Returns the rotation that the player character should have to match the VR headset.
     /// </summary>
     /// <returns>A quaternion containing the new rotation of the player character.</returns>
-    private Quaternion CalculateOrientation()
+    private Quaternion CalculateOrientation() 
     {
         float rotation = Mathf.Atan2(m_MoveValue.axis.x, m_MoveValue.axis.y);
         rotation *= Mathf.Rad2Deg;
@@ -122,13 +117,12 @@ public class VRController : MonoBehaviour
         Vector3 orientationEuler = new Vector3(0, m_Head.eulerAngles.y + rotation, 0);
         return Quaternion.Euler(orientationEuler);
 
-
     }
 
     /// <summary>
     /// Lerp's player character rotation for smooth movement.
     /// </summary>
-    private void fluidMovement()
+    private void fluidMovement() 
     {
         float snapValue = 0.0f;
 
@@ -140,6 +134,4 @@ public class VRController : MonoBehaviour
 
         transform.RotateAround(m_Head.position, Vector3.up, snapValue);
     }
-
-
 }
