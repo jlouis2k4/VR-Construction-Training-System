@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-/// <summary>
-/// Class that handles interactions between the player and hazards
-/// </summary>
+//anything that is commetted out probably has to do with respawning a player into the game again.
+//wasn't working at all even though could should've preformed as intended. still being implemented.
 public class Hazard_Detection : MonoBehaviour
 {
 
@@ -20,32 +19,35 @@ public class Hazard_Detection : MonoBehaviour
     public PlayerIcon player_Icon;
     public float collision_Timer;
 
-    /// <summary>
-    /// Start is called before the first frame update
-    /// </summary>
+
+    // Start is called before the first frame update
     void Start()
     {
         death_Menu_UI.SetActive(false);
         hazard_Menu_UI.SetActive(false);
         collision_Timer = 10f;
+       // print(respawn_Location.transform.position.x);
+       // print(respawn_Location.transform.position.y);
+       // print(respawn_Location.transform.position.z);
+
     }
 
-    /// <summary>
-    /// Update is called once every frame.
-    /// </summary>
+    // Update is called once per frame
+
+
     void Update()
     {
         collision_Timer += Time.deltaTime;
     }
-
-    /// <summary>
-    /// Collider function: Checks to see if player collided with hazard object or death object
-    /// </summary>
-    /// <param name="other">The Collider of the GameObject being collided with</param>
+    //checks to see if player collided with object of hazard, or 
+    //of death
     private void OnTriggerEnter(Collider other)
     {
         if (collision_Timer >= 10)
         {
+ 
+            
+
             collision_Timer = 0;
             //calls function death if player collides with death object
             if (other.gameObject.tag == "deathZone")
@@ -59,17 +61,17 @@ public class Hazard_Detection : MonoBehaviour
 
                 safety_item = other.gameObject;
                 safety_item.SetActive(false);
-                SafetyGearInteract(other.gameObject);
+                safety_Gear_Interact(other.gameObject);
 
             }
         }
     }
 
-    /// <summary>
-    /// Sends message to canvas panel about current equipment being picked up
-    /// </summary>
-    private void SafetyGearInteract(GameObject other)
-    {   
+    //sends message to canvas panel about current equipment being picked up
+    private void safety_Gear_Interact(GameObject other)
+    {
+        
+       
         safety_item = other;
         hazard_Panel.text = " Pick Up " + other.name.ToString() + "?!";
 
@@ -79,12 +81,11 @@ public class Hazard_Detection : MonoBehaviour
         hazard_Menu_UI.transform.position = player_Camera.position + player_Camera.TransformDirection(0, 0, 2);
         hazard_Menu_UI.SetActive(true);
         Pointer.MenuIsActive(true);
+       // toggle_Time();
     }
 
-    /// <summary>
-    /// Checks to see which safety item is getting picked up and acts accordingly
-    /// </summary>
-    public void Equip()
+    //checks to see which safety item is getting picked up and acts accordingly
+    public void equip()
     {
         //collision timer fixes bugs of having constant visuals blocked by assets and 
         //collision boxes
@@ -126,10 +127,7 @@ public class Hazard_Detection : MonoBehaviour
         //destroy object and implement attaching to player;
     }
 
-    /// <summary>
-    /// Cancels equipping item
-    /// </summary>
-    public void DontEquip()
+    public void dont_Equip()
     {
         safety_item.SetActive(true);
         hazard_Menu_UI.SetActive(false);
@@ -164,9 +162,7 @@ public class Hazard_Detection : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// restarts player in same location to continue game
-    /// </summary>
+    //restarts player in same location to continue game
     public void Retry()
     {
         collision_Timer = 0;
@@ -174,5 +170,7 @@ public class Hazard_Detection : MonoBehaviour
         toggle_Time();
         safety_item.SetActive(true);
         death_Menu_UI.SetActive(false);
+        
+
     }
 }

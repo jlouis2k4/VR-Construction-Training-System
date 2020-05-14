@@ -3,9 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// Class that takes a list of hazards from the SavableList script and creates listeners to track the completion status of those hazards. Divides hazards by type and passes their quantities to the ObjectivesListUI script.
-/// </summary>
 public class ObjectiveManager : MonoBehaviour
 {
 	private const int MAX_TIME_SECONDS = 7200; // 2 hours
@@ -89,4 +86,5 @@ public class ObjectiveManager : MonoBehaviour
 		float timeScore = (POINTS_SECONDS_RATIO * (MAX_TIME_SECONDS - gameTimer.getFinalTime()));
 		return Mathf.FloorToInt(BASE_SCORE_MULTIPLIER * ((totalHazardCompleted - deathCount) * timeScore) / totalHazardCount);
 	}
+
 }

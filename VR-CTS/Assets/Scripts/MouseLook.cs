@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// script for personal test level
-/// </summary>
+//script for personal test level
 public class MouseLook : MonoBehaviour
 {
 
@@ -14,20 +12,31 @@ public class MouseLook : MonoBehaviour
 
     float xRotation = 0f;
 
-    /// <summary>
-    /// Update is called once per frame.
-    /// </summary>
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        //lock cursor to center screen.
+    
+    }
+
+    // Update is called once per frame
     void Update()
     {
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-        //Y mouse rotation
+        //y mouse rotation
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
         //X mouse rotation
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        playerBody.Rotate(Vector3.up * mouseX);        
+        playerBody.Rotate(Vector3.up * mouseX);
+
+
+        
     }
+
+   
 }

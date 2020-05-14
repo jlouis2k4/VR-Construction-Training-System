@@ -20,9 +20,6 @@ public class PauseMenu : MonoBehaviour
     public SteamVR_Action_Boolean m_PauseAction;
 	public GameTimer m_GameTimer;
 
-	/// <summary>
-	/// Awake is called when the script instance is being loaded.
-	/// </summary>s
 	void Awake()
 	{
 			m_GameTimer.StartTimer();

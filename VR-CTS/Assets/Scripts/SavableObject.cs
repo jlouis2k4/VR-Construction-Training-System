@@ -17,4 +17,5 @@ public class SavableObject : MonoBehaviour
 	{
 		objName = gameObject.name;
 	}
+
 }

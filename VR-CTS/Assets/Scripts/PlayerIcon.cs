@@ -26,7 +26,7 @@ public class PlayerIcon : MonoBehaviour
 	/// <summary>
     /// Enables the Hard Hat icon if currently diabled, and vice-versa.
     /// </summary>
-    /// <param name="isActive">The icon is active</param>
+    /// <param name="isActive"></param>
     public void ToggleHardHat(bool isActive) {
 		m_HardHat.enabled = isActive;
 	}
@@ -34,7 +34,6 @@ public class PlayerIcon : MonoBehaviour
     /// <summary>
     /// Enables the Safety Goggles icon if currently diabled, and vice-versa.
     /// </summary>
-    /// <param name="isActive">The icon is active</param>
 	public void ToggleGoggles(bool isActive) {
 		m_Goggles.enabled = isActive;
 	}
@@ -42,7 +41,6 @@ public class PlayerIcon : MonoBehaviour
     /// <summary>
     /// Enables the Safety Vest icon if currently diabled, and vice-versa.
     /// </summary>
-    /// <param name="isActive">The icon is active</param>
 	public void ToggleVest(bool isActive) {
 		m_Vest.enabled = isActive;
 	}

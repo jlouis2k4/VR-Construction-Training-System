@@ -22,7 +22,7 @@ public class ObjectivesListUI : MonoBehaviour
     /// Takes an array with an element for each value of the HazType Enum that states how many of each hazard exists in the level.
     /// For each non-zero element in the array, a text object is instantiated in the Pause Menu that tracks how many of that hazard has been completed.
     /// </summary>
-    /// <param name="hazardCountArray">The array that contains the number of each type of hazard in the level. </param>
+    /// <param name="hazardCountArray"> The array that contains the number of each type of hazard in the level. </param>
 	public void RecordHazards(int[] hazardCountArray) {
         GameObject curObject;
         float curOffset = 0;

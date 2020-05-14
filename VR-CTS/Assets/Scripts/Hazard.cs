@@ -52,4 +52,5 @@ public class Hazard : MonoBehaviour
 	public HazType GetHazType() {
 		return type;
 	}
+
 }

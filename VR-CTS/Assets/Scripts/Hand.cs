@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
 
-/// <summary>
-/// Class handling the interaction between the Virtual Reality 'hands' and objects in the level
-/// </summary>
 public class Hand : MonoBehaviour
 {
+
     public SteamVR_Action_Boolean m_GrabAction = null;
 
     private SteamVR_Behaviour_Pose m_Pose = null;
@@ -16,18 +14,15 @@ public class Hand : MonoBehaviour
     private Interactable m_CurrentInteractable = null;
     private List<Interactable> m_ContactInteractables = new List<Interactable>();
 
-    /// <summary>
-	/// Awake is called when the script instance is being loaded.
-	/// </summary>
+
+    // Start is called before the first frame update
     private void Awake()
     {
         m_Pose = GetComponent<SteamVR_Behaviour_Pose>();
         m_Joint = GetComponent<FixedJoint>();
     }
 
-    /// <summary>
-    /// Update is called once every frame.
-    /// </summary>
+    // Update is called once per frame
     void Update()
     {
         if (m_GrabAction.GetStateDown(m_Pose.inputSource)) { }
@@ -37,10 +32,6 @@ public class Hand : MonoBehaviour
         Drop();
     }
 
-    /// <summary>
-    /// Collider function: Called when another Collider intersects this GameObject's trigger Collider. If the other object is tagged as Interactable, add it to the list of objects that can be interacted with currently
-    /// </summary>
-    /// <param name="other">The Collider of the GameObject being collided with</param>
     private void OnTriggerEnter(Collider other)
     {
         if (!other.gameObject.CompareTag("Interactable"))
@@ -49,10 +40,6 @@ public class Hand : MonoBehaviour
         m_ContactInteractables.Add(other.gameObject.GetComponent<Interactable>());
     }
 
-    /// <summary>
-    /// Collider function: Called when another Collider leaves this GameObject's trigger Collider. If the other object is tagged as Interactable, remove it from the list of objects that can be interacted with currently
-    /// </summary>
-    /// <param name="other">The Collider of the GameObject being collided with</param>
     private void OnTriggerExit(Collider other)
     {
         if (!other.gameObject.CompareTag("Interactable"))
@@ -61,12 +48,9 @@ public class Hand : MonoBehaviour
         m_ContactInteractables.Remove(other.gameObject.GetComponent<Interactable>());
     }
 
-    /// <summary>
-    /// Pick up the closest interactable object, if one exists
-    /// </summary>
-    public void Pickup() {
+    public void Pickup(){
 
-        m_CurrentInteractable = GetNearestInteractable();
+        m_CurrentInteractable = GetNearestInteractabel();
 
         if (!m_CurrentInteractable)
             return;
@@ -83,13 +67,12 @@ public class Hand : MonoBehaviour
 
     }
 
-    /// <summary>
-    /// Drop the currently held object, if there is one
-    /// </summary>
     public void Drop() {
 
         if (!m_CurrentInteractable)
             return;
+
+
 
         Rigidbody targetBody = m_CurrentInteractable.GetComponent<Rigidbody>();
         targetBody.velocity = m_Pose.GetVelocity();
@@ -103,11 +86,7 @@ public class Hand : MonoBehaviour
 
     }
 
-    /// <summary>
-    /// Returns the Interactable Componenr from the list of currently interactable objects whose position is closest to the hand
-    /// </summary>
-    /// <returns>The Interactable Component of the GameObject</returns>
-    private Interactable GetNearestInteractable() {
+    private Interactable GetNearestInteractabel() {
         Interactable nearest = null;
         float minDistance = float.MaxValue;
         float distance = 0.0f;
