@@ -20,7 +20,7 @@ Unity creates thousands of metadata files and directories that can make reviewin
 
 # Setup
 1. Clone the repository into a location you can easily find later. The current code base is currently located in the devlop branch.
-2. Install [Unity Version 2019.1.2f](https://unity3d.com/get-unity/download/archive "Unity").
+2. Install [Unity Version 2019.1.2f](https://unity3d.com/get-unity/download/archive "Unity"). It is recommended to install [Unity Hub](https://unity3d.com/get-unity/download "Unity Hub"), especially for Linux users.
 3. Install [SteamVR](https://store.steampowered.com/app/250820/SteamVR/ "SteamVR").
 4. If you have a htc Vive Pro Eye headset, ensure that the headset is operational and connected to SteamVR.
 5. Open Unity 2019.1.2f.
