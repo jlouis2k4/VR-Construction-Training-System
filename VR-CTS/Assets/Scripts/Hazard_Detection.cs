@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class Hazard_Detection : MonoBehaviour
 {
 
-    public Text hazard_Panel;
+    public Text hazard_Text;
     public GameObject hazard_Menu_UI;
     public GameObject death_Menu_UI;
     public Transform player_Camera;
@@ -24,7 +24,7 @@ public class Hazard_Detection : MonoBehaviour
     void Start()
     {
         death_Menu_UI.SetActive(false);
-        hazard_Menu_UI.SetActive(false);
+        hazard_Menu_UI.SetActive(true);
         collision_Timer = 10f;
        // print(respawn_Location.transform.position.x);
        // print(respawn_Location.transform.position.y);
@@ -73,7 +73,7 @@ public class Hazard_Detection : MonoBehaviour
         
        
         safety_item = other;
-        hazard_Panel.text = " Pick Up " + other.name.ToString() + "?!";
+        hazard_Text.text = " Pick Up " + other.name.ToString() + "?!";
 
         //aligns menu panels with players current headset direction
         Vector3 headsetRot = player_Camera.rotation.eulerAngles;
@@ -100,7 +100,7 @@ public class Hazard_Detection : MonoBehaviour
         }
 
         //attachs the helmet to player given it a more realistic feeling
-        if(safety_item.name == "Hard_Hat")
+        if(safety_item.name == "Hard_Hat" || safety_item.name == "Hard_Hat(Clone)")
         {
             safety_item.gameObject.tag = "Untagged";
 
@@ -111,14 +111,14 @@ public class Hazard_Detection : MonoBehaviour
             player_Icon.ToggleHardHat(true);
             safety_item = null;
         }
-        else if(safety_item.name == "Safety Vest")
+        else if(safety_item.name == "Safety Vest" || safety_item.name == "Safety Vest(Clone)")
         {
             player_Icon.ToggleVest(true);
             Destroy(safety_item);
             safety_item = null;
 
         }
-        else if(safety_item.name == "Safety Glasses")
+        else if(safety_item.name == "Safety Glasses" || safety_item.name == "Safety Glasses(Clone)")
         {
             player_Icon.ToggleGoggles(true);
             Destroy(safety_item);

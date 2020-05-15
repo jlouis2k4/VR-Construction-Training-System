@@ -23,7 +23,7 @@ public class elevator_Hazard : MonoBehaviour
     //sets off a true command telling the game hazard has been completed
     public void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "barricade")
+        if(other.gameObject.name == "safety_Cone(Clone)")
         {
             print(other.gameObject.name);
             hazard.Completed = true; //communicates and updates score.
@@ -35,7 +35,7 @@ public class elevator_Hazard : MonoBehaviour
     //turns hazard completion to false, if barricade is removed
     public void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "barricade")
+        if (other.gameObject.tag == "safety_Cone(Clone)")
         {
             print(other.gameObject.name);
             hazard.Completed = false;
