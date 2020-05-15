@@ -47,7 +47,6 @@ public class ExitMenu : MonoBehaviour
 		endLevelMenu.SetActive(false);
 		scoreText.text = "Score: " + objManager.GetScore().ToString();
 		scoreMenu.SetActive(true);
-		
 	}
 
 	/// <summary>

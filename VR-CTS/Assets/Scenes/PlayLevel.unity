@@ -590,21 +590,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2079571102}
     - target: {fileID: 2198338352274847302, guid: f81be8eaa8e57284291f19ffc73e0520,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: equip
+      value: Equip
       objectReference: {fileID: 0}
     - target: {fileID: 2198338353941191723, guid: f81be8eaa8e57284291f19ffc73e0520,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2079571102}
     - target: {fileID: 2198338353941191723, guid: f81be8eaa8e57284291f19ffc73e0520,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: dont_Equip
+      value: DontEquip
       objectReference: {fileID: 0}
     - target: {fileID: 5267878486869771397, guid: f81be8eaa8e57284291f19ffc73e0520,
         type: 3}

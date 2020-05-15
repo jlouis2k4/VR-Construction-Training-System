@@ -2,21 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class that moves the Player if they collide with the attached GameObject's Collider
+/// </summary>
 public class sendPlayer : MonoBehaviour
 {
     public Transform respawnPoint = null;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+    /// <summary>
+    /// Collider function that runs when this object's trigger Collider collides with another Collider.
+    /// </summary>
+    /// <param name="other">The Collider of the object that was collided with</param>
     private void OnTriggerEnter(Collider other)
     {
         print("player touched!\n");
