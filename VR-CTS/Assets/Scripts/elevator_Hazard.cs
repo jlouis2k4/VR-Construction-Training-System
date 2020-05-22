@@ -23,7 +23,7 @@ public class elevator_Hazard : MonoBehaviour
     /// <param name="other">The Collider of the other GameObject being collided with</param>
     public void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.name == "safety_Cone(Clone)")
+        if(other.gameObject.tag == "grab")
         {
             //communicates that hazard is completed and updates score.
             hazard.Completed = true;
@@ -38,7 +38,7 @@ public class elevator_Hazard : MonoBehaviour
     /// <param name="other">The Collider of the other GameObject being collided with</param>
     public void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "safety_Cone(Clone)")
+        if (other.gameObject.tag == "grab")
         {
             print(other.gameObject.name);
             hazard.Completed = false;

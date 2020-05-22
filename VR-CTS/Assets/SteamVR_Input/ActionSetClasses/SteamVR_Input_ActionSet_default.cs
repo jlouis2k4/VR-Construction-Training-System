@@ -113,6 +113,14 @@ namespace Valve.VR
             }
         }
         
+        public virtual SteamVR_Action_Boolean rotatetouch
+        {
+            get
+            {
+                return SteamVR_Actions.default_rotatetouch;
+            }
+        }
+        
         public virtual SteamVR_Action_Vibration Haptic
         {
             get
